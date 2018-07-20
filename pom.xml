@@ -41,7 +41,7 @@
                     <assembleDirectory>target</assembleDirectory>
                     <programs>
                         <program>
-                            <mainClass>MyBotSettings</mainClass>
+                            <mainClass>Main</mainClass>
                             <name>ispylnev</name>
                         </program>
                     </programs>
