@@ -7,19 +7,30 @@ import java.util.List;
 
 public class MyBotSettings extends TelegramLongPollingBot {
 
-    public void onUpdateReceived(Update update) {
-        if (update.hasMessage()&&update.getMessage().hasText()){
-            String massageText = update.getMessage().getText();
-            long chatId = update.getMessage().getChatId();
-
-            SendMessage sendMessage = new SendMessage()
-                    .setChatId(chatId)
-                    .setText(massageText);
-            try{
-                execute(sendMessage);
-            }catch (TelegramApiException e){
-                e.printStackTrace();
-            }
+//  public void onUpdateReceived(Update update) {
+//        if (update.hasMessage()&&update.getMessage().hasText()){
+//            String massageText = update.getMessage().getText();
+//            long chatId = update.getMessage().getChatId();
+//
+//            SendMessage sendMessage = new SendMessage()
+//                    .setChatId(chatId)
+//                    .setText(massageText);
+//            try{
+//                execute(sendMessage);
+//            }catch (TelegramApiException e){
+//                e.printStackTrace();
+//            }
+//        }
+//
+////    }
+    @Override
+    public void onUpdateReceived(Update update){
+        SendMessage sendMessage = new SendMessage().setChatId(update.getMessage().getChatId());
+        sendMessage.setText("Hello");
+        try{
+            sendMessage(sendMessage);
+        }catch (TelegramApiException e){
+            e.printStackTrace();
         }
 
     }
