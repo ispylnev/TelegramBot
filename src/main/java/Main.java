@@ -5,7 +5,7 @@ import org.telegram.telegrambots.exceptions.TelegramApiRequestException;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("XTHN");
+
         ApiContextInitializer.init();
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi();
         try{
