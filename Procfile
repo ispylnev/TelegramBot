@@ -1,1 +1,1 @@
-worker: sh target/bin/ispylnev
+worker: sh target/bin/Bot

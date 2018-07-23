@@ -9,7 +9,7 @@
 //        ApiContextInitializer.init();
 //        TelegramBotsApi telegramBotsApi = new TelegramBotsApi();
 //        try{
-//            telegramBotsApi.registerBot(MyBotSettings.);
+//            telegramBotsApi.registerBot(Bot.);
 //        } catch (TelegramApiException e) {
 //            e.printStackTrace();
 //        }

@@ -7,40 +7,16 @@ import org.telegram.telegrambots.exceptions.TelegramApiException;
 
 import java.util.List;
 
-public class MyBotSettings extends TelegramLongPollingBot {
+public class Bot extends TelegramLongPollingBot {
 
-//  public void onUpdateReceived(Update update) {
-//        if (update.hasMessage()&&update.getMessage().hasText()){
-//            String massageText = update.getMessage().getText();
-//            long chatId = update.getMessage().getChatId();
-//
-//            SendMessage sendMessage = new SendMessage()
-//                    .setChatId(chatId)
-//                    .setText(massageText);
-//            try{
-//                execute(sendMessage);
-//            }catch (TelegramApiException e){
-//                e.printStackTrace();
-//            }
-//        }
-//
-//    }
 
-    /**
-     * Метод для приема сообщений.
-     * @param update Содержит сообщение от пользователя.
-     */
+
     @Override
     public void onUpdateReceived(Update update) {
         String message = update.getMessage().getText();
         sendMsg(update.getMessage().getChatId().toString(), message);
     }
 
-    /**
-     * Метод для настройки сообщения и его отправки.
-     * @param chatId id чата
-     * @param s Строка, которую необходимот отправить в качестве сообщения.
-     */
     public synchronized void sendMsg(String chatId, String s) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.enableMarkdown(true);
@@ -49,7 +25,7 @@ public class MyBotSettings extends TelegramLongPollingBot {
         try {
             sendMessage(sendMessage);
         } catch (TelegramApiException e) {
-           e.printStackTrace();
+            e.printStackTrace();
         }
     }
 
@@ -67,12 +43,12 @@ public class MyBotSettings extends TelegramLongPollingBot {
     }
 
     public static void main(String[] args) {
-        MyBotSettings myBotSettings=new MyBotSettings();
+        Bot botSettings =new Bot();
 
         ApiContextInitializer.init();
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi();
         try{
-            telegramBotsApi.registerBot(myBotSettings);
+            telegramBotsApi.registerBot(botSettings);
         } catch (TelegramApiException e) {
             e.printStackTrace();
         }

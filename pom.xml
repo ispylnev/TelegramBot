@@ -36,13 +36,13 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>appassembler-maven-plugin</artifactId>
-                <version>1.1.1</version>
+                <version>1.2.2</version>
                 <configuration>
                     <assembleDirectory>target</assembleDirectory>
                     <programs>
                         <program>
-                            <mainClass>MyBotSettings</mainClass>
-                            <name>ispylnev</name>
+                            <mainClass>Bot</mainClass>
+                            <name>Bot</name>
                         </program>
                     </programs>
                 </configuration>
