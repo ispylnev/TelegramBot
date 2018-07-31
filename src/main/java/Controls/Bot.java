@@ -1,3 +1,5 @@
+package Controls;
+
 import Utils.FileUtils;
 import org.telegram.telegrambots.api.methods.send.SendMessage;
 import org.telegram.telegrambots.api.objects.Message;
@@ -16,6 +18,10 @@ public class Bot extends TelegramLongPollingBot {
     }
     private String botName = FileUtils.getBotName(properties);
     private String token = FileUtils.getToken(properties);
+
+    public Bot() {
+
+    }
 
 
     public void sendMsg(Message massage, String text){
