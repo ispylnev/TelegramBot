@@ -61,7 +61,8 @@ public class Bot extends TelegramLongPollingBot  {
                     sendMsg(mes,"Урааа домой:"+"\n"+ dateEnd);
                     break;
                 case "/start":
-                    sendMsg(mes,"Инициализация");
+                    sendMsg(mes,"Инициализция успешна"+"\n"+ "Можно работать");
+
             }
 
         }
