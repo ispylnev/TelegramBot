@@ -18,7 +18,7 @@ public class Main {
                 serverProperties.startProxyServer(telegramBotsApi);
                 System.out.println("Запуск через Proxy выполнен успешно");
             } catch (TelegramApiException e1) {
-                System.out.println("Проверьте настройки подключения и доступность вашего сервера");
+                System.out.println("Проверьте настройки подключения и доступность вашего сервера ");
                 e1.printStackTrace();
             }
         }
