@@ -58,8 +58,10 @@ public class Bot extends TelegramLongPollingBot  {
 
                 case "ЗАКОНЧИТЬ":
                     String dateEnd = dateFormat.format(date);
-                    sendMsg(mes, dateEnd);
+                    sendMsg(mes,"Урааа домой:"+"\n"+ dateEnd);
                     break;
+                case "/start":
+                    sendMsg(mes,"Инициализация");
             }
 
         }
