@@ -10,12 +10,17 @@ import org.telegram.telegrambots.api.objects.replykeyboard.buttons.KeyboardRow;
 import org.telegram.telegrambots.bots.DefaultBotOptions;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.exceptions.TelegramApiException;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.util.*;
 
 
 public class Bot extends TelegramLongPollingBot  {
     private Properties properties = new Properties();
+    Date date = new Date();
+    DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
     protected Bot(DefaultBotOptions options) {
         super(options);
     }
@@ -46,12 +51,13 @@ public class Bot extends TelegramLongPollingBot  {
         if (mes!=null && mes.hasText()){
             switch (mes.getText()){
                 case "НАЧАТЬ":
-                    String date = String.valueOf(LocalTime.now()) ;
-                    sendMsg(mes,"Начало работы :"+"\n"+date);
+
+                    String data = dateFormat.format(date);
+                    sendMsg(mes,"Начало работы :"+"\n"+data);
                     break;
 
                 case "ЗАКОНЧИТЬ":
-                    String dateEnd = String.valueOf(LocalTime.now());
+                    String dateEnd = dateFormat.format(date);
                     sendMsg(mes, dateEnd);
                     break;
             }
