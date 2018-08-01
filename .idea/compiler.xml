@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="TelegramBot" target="7" />
+      <module name="TelegramBot" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -16,14 +16,12 @@ import java.util.Properties;
 public class ServerProperties {
 
     private static Properties properties = new Properties();
-    private static String bot = "Pylnevbot";
-    private static String token = "648680294:AAFKL6j52_tC4E_a-me8Z0-YPOQD_dgiFH4";
     private static String urlProxy = FileUtils.getUrlProxy(properties);
     private static Integer proxyPort = FileUtils.geProxyPort(properties);
     private static String proxyUser = FileUtils.getUserProxy(properties);
     private static String proxyPassword = FileUtils.getProxyPassword(properties);
 
-    public void startProxyServer(TelegramBotsApi telegramBotsApi) {
+    public void startProxyServer(TelegramBotsApi telegramBotsApi) throws TelegramApiException {
 
         DefaultBotOptions botOptions = ApiContext.getInstance(DefaultBotOptions.class);
         CredentialsProvider credentialsProvider = new BasicCredentialsProvider();
@@ -35,19 +33,11 @@ public class ServerProperties {
         botOptions.setRequestConfig(requestConfig);
         botOptions.setCredentialsProvider(credentialsProvider);
         botOptions.setHttpProxy(httpHost);
-        try {
-            telegramBotsApi.registerBot(new Bot(botOptions));
-        } catch (TelegramApiException e) {
-            e.printStackTrace();
-        }
+        telegramBotsApi.registerBot(new Bot(botOptions));
     }
 
-    public void startGlobalServer(TelegramBotsApi telegramBotsApi) {
+    public void startGlobalServer(TelegramBotsApi telegramBotsApi) throws TelegramApiException {
         Bot bot = new Bot();
-        try {
-            telegramBotsApi.registerBot(bot);
-        } catch (TelegramApiException e) {
-            e.printStackTrace();
-        }
+        telegramBotsApi.registerBot(bot);
     }
 }

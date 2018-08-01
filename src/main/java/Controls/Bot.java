@@ -4,15 +4,18 @@ import Utils.FileUtils;
 import org.telegram.telegrambots.api.methods.send.SendMessage;
 import org.telegram.telegrambots.api.objects.Message;
 import org.telegram.telegrambots.api.objects.Update;
+import org.telegram.telegrambots.api.objects.replykeyboard.ReplyKeyboardMarkup;
+import org.telegram.telegrambots.api.objects.replykeyboard.buttons.KeyboardButton;
+import org.telegram.telegrambots.api.objects.replykeyboard.buttons.KeyboardRow;
 import org.telegram.telegrambots.bots.DefaultBotOptions;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.exceptions.TelegramApiException;
+import java.time.LocalTime;
+import java.util.*;
 
-import java.util.Properties;
 
-
-public class Bot extends TelegramLongPollingBot {
-    Properties properties = new Properties();
+public class Bot extends TelegramLongPollingBot  {
+    private Properties properties = new Properties();
     protected Bot(DefaultBotOptions options) {
         super(options);
     }
@@ -20,7 +23,6 @@ public class Bot extends TelegramLongPollingBot {
     private String token = FileUtils.getToken(properties);
 
     public Bot() {
-
     }
 
 
@@ -31,7 +33,8 @@ public class Bot extends TelegramLongPollingBot {
         sendMessage.setReplyToMessageId(massage.getMessageId());
         sendMessage.setText(text);
         try{
-            sendMessage(sendMessage);
+            setButtons(sendMessage);
+            execute(sendMessage);
         }catch (TelegramApiException e){
             e.printStackTrace();
         }
@@ -42,8 +45,14 @@ public class Bot extends TelegramLongPollingBot {
         Message mes = update.getMessage();
         if (mes!=null && mes.hasText()){
             switch (mes.getText()){
-                case "/help":
-                    sendMsg(mes,"Привет! Я новый бот, скоро я буду гораздно функциональнее");
+                case "НАЧАТЬ":
+                    String date = String.valueOf(LocalTime.now()) ;
+                    sendMsg(mes,"Начало работы :"+"\n"+date);
+                    break;
+
+                case "ЗАКОНЧИТЬ":
+                    String dateEnd = String.valueOf(LocalTime.now());
+                    sendMsg(mes, dateEnd);
                     break;
             }
 
@@ -54,13 +63,32 @@ public class Bot extends TelegramLongPollingBot {
 
     public String getBotUsername() {
 
-
         return botName;
     }
 
     public String getBotToken() {
 
         return token;
+    }
+
+    public void setButtons(SendMessage sendMessage){
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+//        видимость сообщения
+        replyKeyboardMarkup.setSelective(true);
+//        подгонка клавиатуры под клиента
+        replyKeyboardMarkup.setResizeKeyboard(true);
+//       скртие кнопки после ввода
+        replyKeyboardMarkup.setOneTimeKeyboard(false);
+//        создаем кнопки
+        List<KeyboardRow> keyboardRowsList= new ArrayList<>();
+
+        KeyboardRow keyboardFirstRow = new KeyboardRow();
+        keyboardFirstRow.add(new KeyboardButton("НАЧАТЬ"));
+        keyboardFirstRow.add(new KeyboardButton("ЗАКОНЧИТЬ"));
+        keyboardRowsList.add(keyboardFirstRow);
+//        Устанавливаем список клавиатуре
+        replyKeyboardMarkup.setKeyboard(keyboardRowsList);
 
     }
 

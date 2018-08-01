@@ -26,6 +26,7 @@ public class FileUtils {
             e.printStackTrace();
         }
         return (String)properties.get("proxy");
+
     }
 
     public static String  getProxyPassword(Properties properties)  {
