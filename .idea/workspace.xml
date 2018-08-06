@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a48b808f-5503-480d-97eb-c0442c165204" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controls/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controls/Bot.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -61,8 +61,8 @@
       <file leaf-file-name="Bot.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Controls/Bot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="95" column="4" lean-forward="true" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="4" />
+            <state relative-caret-position="272">
+              <caret line="79" column="79" lean-forward="true" selection-start-line="79" selection-start-column="79" selection-end-line="79" selection-end-column="79" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#828#829#0" expanded="true" />
@@ -144,8 +144,8 @@
         <option value="$PROJECT_DIR$/src/main/java/Controls/Data.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/Date.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/Debug.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Controls/Bot.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/MyDate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Controls/Bot.java" />
       </list>
     </option>
   </component>
@@ -158,7 +158,12 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="TelegramBot" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
@@ -491,7 +496,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533575171013</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Для теста">
+      <created>1533576890702</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1533576890702</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView">
@@ -513,10 +525,10 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="7" weight="0.24291497" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.20323886" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3291592" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2665474" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.24865831" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2665474" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.2504472" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.22024292" />
@@ -548,14 +560,15 @@
     <MESSAGE value="Изменена логика работы" />
     <MESSAGE value="Изменил логику" />
     <MESSAGE value="Корректировка кнопок &quot;начать&quot; &#10;&quot;Закончить&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Корректировка кнопок &quot;начать&quot; &#10;&quot;Закончить&quot;" />
+    <MESSAGE value="Для теста" />
+    <option name="LAST_COMMIT_MESSAGE" value="Для теста" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Controls/Bot.java</url>
-          <line>118</line>
+          <line>119</line>
           <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
@@ -957,8 +970,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Controls/Bot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="95" column="4" lean-forward="true" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="4" />
+        <state relative-caret-position="272">
+          <caret line="79" column="79" lean-forward="true" selection-start-line="79" selection-start-column="79" selection-end-line="79" selection-end-column="79" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#828#829#0" expanded="true" />
