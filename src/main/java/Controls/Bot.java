@@ -1,6 +1,7 @@
 package Controls;
 
 import Utils.FileUtils;
+import Utils.MyDate;
 import org.telegram.telegrambots.api.methods.send.SendMessage;
 import org.telegram.telegrambots.api.objects.Message;
 import org.telegram.telegrambots.api.objects.Update;
@@ -11,21 +12,34 @@ import org.telegram.telegrambots.bots.DefaultBotOptions;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.exceptions.TelegramApiException;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.time.LocalTime;
 import java.util.*;
 
 
 public class Bot extends TelegramLongPollingBot  {
     private Properties properties = new Properties();
-    Date date = new Date();
-    DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
     protected Bot(DefaultBotOptions options) {
         super(options);
     }
+    private String beginTime;
+    private String endtime;
     private String botName = FileUtils.getBotName(properties);
     private String token = FileUtils.getToken(properties);
+
+    private String getBeginTime() {
+        return beginTime;
+    }
+
+    private void setBeginTime(String beginTime) {
+        this.beginTime = beginTime;
+    }
+
+    private String getEndtime() {
+        return endtime;
+    }
+
+    private void setEndtime(String endtime) {
+        this.endtime = endtime;
+    }
 
     public Bot() {
     }
@@ -51,15 +65,16 @@ public class Bot extends TelegramLongPollingBot  {
         if (mes!=null && mes.hasText()){
             switch (mes.getText()){
                 case "НАЧАТЬ":
-
-                    String data = dateFormat.format(date);
-                    sendMsg(mes,"Начало работы :"+"\n"+data);
+                    setBeginTime(MyDate.getTimeNow());
+                    sendMsg(mes,"Начало работы :" + "\n" + beginTime.substring(0,19));
                     break;
 
                 case "ЗАКОНЧИТЬ":
-                    String dateEnd = dateFormat.format(date);
-                    sendMsg(mes,"Урааа домой:"+"\n"+ dateEnd);
+                    setEndtime(MyDate.getTimeNow());
+                    sendMsg(mes,"Время окончания работы: " + "\n" +  endtime.substring(0,19));
+                    sendMsg(mes,"Отработано за сегодня :" + "\n" + MyDate.workingHours(beginTime,endtime));
                     break;
+
                 case "/start":
                     sendMsg(mes,"Инициализция успешна"+"\n"+ "Можно работать");
 
