@@ -73,7 +73,6 @@ public class Bot extends TelegramLongPollingBot  {
                     setEndtime(MyDate.getTimeNow());
                     sendMsg(mes,"Время окончания работы: " + "\n" +  endtime.substring(0,19));
                     sendMsg(mes,"Отработано за сегодня :" + "\n" + MyDate.workingHours(getBeginTime(),getEndtime()));
-
                     break;
 
                 case "/start":
