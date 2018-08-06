@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ca52df8-8e63-4141-b9fd-58c8d441fd9a" name="Default" comment="испрви">
+    <list default="true" id="a48b808f-5503-480d-97eb-c0442c165204" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBot.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controls/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controls/Bot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/Debug.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/MyDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/MyDate.java" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +37,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
+            <state relative-caret-position="361">
+              <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,8 +49,8 @@
       <file leaf-file-name="ServerProperties.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Controls/ServerProperties.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-459">
-              <caret column="17" selection-start-column="17" selection-end-column="17" />
+            <state>
+              <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -58,35 +58,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bot.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Bot.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Controls/Bot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+            <state relative-caret-position="272">
+              <caret line="79" column="79" lean-forward="true" selection-start-line="79" selection-start-column="79" selection-end-line="79" selection-end-column="79" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#835#836#0" expanded="true" />
-                <element signature="e#865#866#0" expanded="true" />
-                <element signature="e#1082#1083#0" expanded="true" />
-                <element signature="e#1114#1115#0" expanded="true" />
-                <element signature="e#1165#1166#0" expanded="true" />
-                <element signature="e#1207#1208#0" expanded="true" />
-                <element signature="e#1242#1243#0" expanded="true" />
-                <element signature="e#1272#1273#0" expanded="true" />
-                <element signature="e#1319#1320#0" expanded="true" />
-                <element signature="e#1357#1358#0" expanded="true" />
+                <element signature="e#828#829#0" expanded="true" />
+                <element signature="e#858#859#0" expanded="true" />
+                <element signature="e#1248#1249#0" expanded="true" />
+                <element signature="e#1280#1281#0" expanded="true" />
+                <element signature="e#1330#1331#0" expanded="true" />
+                <element signature="e#1372#1373#0" expanded="true" />
+                <element signature="e#1406#1407#0" expanded="true" />
+                <element signature="e#1436#1437#0" expanded="true" />
+                <element signature="e#1482#1483#0" expanded="true" />
+                <element signature="e#1515#1516#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyDate.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyDate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Utils/MyDate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+            <state relative-caret-position="425">
+              <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Debug.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Debug.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="20" />
+              <folding>
+                <element signature="e#0#726#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -101,15 +113,47 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <dirStrings>
+      <dir>C:\Project\BotTelegram\src\main\java\Utils</dir>
+    </dirStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/Controls/Bot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Test/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MyBotSettings.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MyBot.java" />
+        <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/Properties.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/UtilsProperties.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Bot.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/FileUtils.java" />
+        <option value="$PROJECT_DIR$/heroku" />
+        <option value="$PROJECT_DIR$/src/main/java/Controls/ServerProperties.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/NewThread.java" />
+        <option value="$PROJECT_DIR$/properties.dat" />
+        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Controls/Debug.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Controls/Data.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/Date.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/Debug.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/MyDate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Controls/Bot.java" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
@@ -122,6 +166,12 @@
       </expand>
       <select />
     </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="505" />
+    <option name="y" value="12" />
+    <option name="width" value="1152" />
+    <option name="height" value="936" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -138,68 +188,34 @@
               <item name="BotTelegram" type="b2602c69:ProjectViewProjectNode" />
               <item name="BotTelegram" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="BotTelegram" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BotTelegram" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BotTelegram" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BotTelegram" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BotTelegram" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BotTelegram" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BotTelegram" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BotTelegram" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BotTelegram" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BotTelegram" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Controls" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BotTelegram" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BotTelegram" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BotTelegram" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BotTelegram" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BotTelegram" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BotTelegram" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BotTelegram" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BotTelegram" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="maven-status" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.43908045" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Controls" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Project\BotTelegram" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -321,7 +337,6 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="a48b808f-5503-480d-97eb-c0442c165204" name="Default" comment="" />
-      <changelist id="c4c2945e-8b1a-4292-ac69-bcd28428bfde" name="Для сервера время" comment="" />
       <created>1531762660175</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -488,27 +503,7 @@
       <option name="project" value="LOCAL" />
       <updated>1533576890702</updated>
     </task>
-    <task id="LOCAL-00024" summary="Для теста">
-      <created>1533577313773</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1533577313773</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Для сервера время">
-      <created>1533578279939</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1533578279939</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Для сервера время">
-      <created>1533579197407</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1533579197407</updated>
-    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView">
@@ -522,7 +517,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3291592" />
@@ -532,9 +526,9 @@
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.20323886" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.22719142" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3291592" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2665474" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.22719142" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.2504472" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.22024292" />
@@ -544,7 +538,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info id="Favorites" order="5" sideWeight="0.5012285" side_tool="true" weight="0.22024292" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.28085867" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3059034" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32955465" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -552,32 +546,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -593,9 +561,53 @@
     <MESSAGE value="Изменил логику" />
     <MESSAGE value="Корректировка кнопок &quot;начать&quot; &#10;&quot;Закончить&quot;" />
     <MESSAGE value="Для теста" />
-    <MESSAGE value="Для сервера время" />
-    <MESSAGE value="Revert &quot;Корректировка кнопок &quot;начать&quot;&quot;&#10;&#10;This reverts commit ab90c616030b6e1e815a9c9ae55ebab75e4dc0b1.&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/Controls/Bot.java&#10;#&#9;src/main/java/Utils/MyDate.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;Корректировка кнопок &quot;начать&quot;&quot;&#10;&#10;This reverts commit ab90c616030b6e1e815a9c9ae55ebab75e4dc0b1.&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/Controls/Bot.java&#10;#&#9;src/main/java/Utils/MyDate.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Для теста" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Controls/Bot.java</url>
+          <line>119</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Controls/Bot.java</url>
+          <line>64</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Utils/MyDate.java</url>
+          <line>9</line>
+          <properties />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/Controls/Data.java</url>
+          <line>7</line>
+          <properties class="Controls.Data" method="main">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="29" />
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>duration.toHours()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$MAVEN_REPOSITORY$/org/telegram/telegrambots-meta/3.6.1/telegrambots-meta-3.6.1.jar!/org/telegram/telegrambots/TelegramBotsApi.class">
@@ -791,6 +803,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/telegram/telegrambots-meta/3.6.1/telegrambots-meta-3.6.1.jar!/org/telegram/telegrambots/generics/LongPollingBot.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#469#470#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/telegram/telegrambots/3.6.1/telegrambots-3.6.1.jar!/org/telegram/telegrambots/updatesreceivers/DefaultBotSession.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -834,6 +856,11 @@
         <state relative-caret-position="102">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-969" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
@@ -901,12 +928,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/telegram/telegrambots-meta/3.6.1/telegrambots-meta-3.6.1.jar!/org/telegram/telegrambots/generics/LongPollingBot.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/MyDate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="425">
+          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="45" />
           <folding>
-            <element signature="e#524#525#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -921,27 +948,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controls/ServerProperties.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-459">
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
+        <state relative-caret-position="361">
+          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controls/ServerProperties.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="74" column="20" lean-forward="true" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
+        <state>
+          <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -950,30 +970,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Controls/Bot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        <state relative-caret-position="272">
+          <caret line="79" column="79" lean-forward="true" selection-start-line="79" selection-start-column="79" selection-end-line="79" selection-end-column="79" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#835#836#0" expanded="true" />
-            <element signature="e#865#866#0" expanded="true" />
-            <element signature="e#1082#1083#0" expanded="true" />
-            <element signature="e#1114#1115#0" expanded="true" />
-            <element signature="e#1165#1166#0" expanded="true" />
-            <element signature="e#1207#1208#0" expanded="true" />
-            <element signature="e#1242#1243#0" expanded="true" />
-            <element signature="e#1272#1273#0" expanded="true" />
-            <element signature="e#1319#1320#0" expanded="true" />
-            <element signature="e#1357#1358#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/MyDate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#828#829#0" expanded="true" />
+            <element signature="e#858#859#0" expanded="true" />
+            <element signature="e#1248#1249#0" expanded="true" />
+            <element signature="e#1280#1281#0" expanded="true" />
+            <element signature="e#1330#1331#0" expanded="true" />
+            <element signature="e#1372#1373#0" expanded="true" />
+            <element signature="e#1406#1407#0" expanded="true" />
+            <element signature="e#1436#1437#0" expanded="true" />
+            <element signature="e#1482#1483#0" expanded="true" />
+            <element signature="e#1515#1516#0" expanded="true" />
           </folding>
         </state>
       </provider>
