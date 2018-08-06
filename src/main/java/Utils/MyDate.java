@@ -14,9 +14,11 @@ public class MyDate {
     }
 
         public static String workingHours (String beginTime, String endTime) {
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSSSSSSSS");
-            LocalDateTime start = LocalDateTime.parse(beginTime, formatter);
-            LocalDateTime end = LocalDateTime.parse(endTime, formatter);
+//            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSSSSSSSS");
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
+            System.out.println(beginTime);
+            LocalDateTime start = LocalDateTime.parse(beginTime,formatter);
+            LocalDateTime end = LocalDateTime.parse(endTime,formatter);
             Duration duration = Duration.between(start, end);
             //            System.out.println(gf);
             return String.format("%dчасов %dминут %dсекунд%n",
