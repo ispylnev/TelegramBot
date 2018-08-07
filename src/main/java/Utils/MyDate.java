@@ -36,7 +36,7 @@ public class MyDate {
 //                    duration.toDays(),
                     duration.toHours() % 24,
                     duration.toMinutes() % 60,
-                    duration.toMillis() % 1000);
+                    duration.toMillis() % 10);
         }
 
     }
