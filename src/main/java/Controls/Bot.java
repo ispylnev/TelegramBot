@@ -65,6 +65,7 @@ public class Bot extends TelegramLongPollingBot  {
         if (mes!=null && mes.hasText()){
             switch (mes.getText()){
                 case "НАЧАТЬ":
+
                     setBeginTime(MyDate.getTimeNow());
                     sendMsg(mes,"Начало работы :" + "\n" + beginTime.substring(0,19));
                     break;

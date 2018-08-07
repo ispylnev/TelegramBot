@@ -20,9 +20,11 @@ public class ServerProperties {
     private static Integer proxyPort = FileUtils.geProxyPort(properties);
     private static String proxyUser = FileUtils.getUserProxy(properties);
     private static String proxyPassword = FileUtils.getProxyPassword(properties);
+    public static boolean startGlobalServer;
 
     public void startProxyServer(TelegramBotsApi telegramBotsApi) throws TelegramApiException {
 
+        startGlobalServer = false;
         DefaultBotOptions botOptions = ApiContext.getInstance(DefaultBotOptions.class);
         CredentialsProvider credentialsProvider = new BasicCredentialsProvider();
         credentialsProvider.setCredentials(
@@ -37,6 +39,8 @@ public class ServerProperties {
     }
 
     public void startGlobalServer(TelegramBotsApi telegramBotsApi) throws TelegramApiException {
+
+        startGlobalServer = true;
         Bot bot = new Bot();
         telegramBotsApi.registerBot(bot);
     }
