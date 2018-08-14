@@ -15,7 +15,9 @@ public class FileUtils {
         }catch (FileNotFoundException e){
             e.printStackTrace();
         }
+
         return fileInputStream;
+
     }
 
     public static String getUrlProxy(Properties properties) {

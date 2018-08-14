@@ -1,19 +1,36 @@
 package Utils;
-import Controls.ServerProperties;
-
 import java.time.*;
 import java.time.format.DateTimeFormatter;
-import java.util.zip.DataFormatException;
 
 
 public class MyDate {
+    private static String beginTime;
+    private static String endTime;
+
+
+    public static String getBeginTime() {
+        return beginTime;
+    }
+
+    public static void setBeginTime(String beginTime) {
+        MyDate.beginTime = beginTime;
+    }
+
+    public static String getEndtime() {
+        return endTime;
+    }
+
+    public static void setEndtime(String endtime) {
+       MyDate.endTime = endtime;
+    }
+
     public static String getTimeNow() {
         String localDate = String.valueOf(LocalDate.now());
         String localTime = String.valueOf(LocalTime.now());
         return localDate + " " + localTime;
     }
 
-    public static String workingHours(String beginTime, String endTime){
+    public static String workingHours(){
          try{
              DateTimeFormatter formatterProxy = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSSSSSSSS");
             LocalDateTime start = LocalDateTime.parse(beginTime, formatterProxy);
@@ -40,4 +57,5 @@ public class MyDate {
         }
 
     }
+
 }

@@ -17,29 +17,16 @@ import java.util.*;
 
 public class Bot extends TelegramLongPollingBot  {
     private Properties properties = new Properties();
+
     protected Bot(DefaultBotOptions options) {
         super(options);
     }
+
     private String beginTime;
-    private String endtime;
+    private String endTime;
     private String botName = FileUtils.getBotName(properties);
     private String token = FileUtils.getToken(properties);
 
-    private String getBeginTime() {
-        return beginTime;
-    }
-
-    private void setBeginTime(String beginTime) {
-        this.beginTime = beginTime;
-    }
-
-    private String getEndtime() {
-        return endtime;
-    }
-
-    private void setEndtime(String endtime) {
-        this.endtime = endtime;
-    }
 
     public Bot() {
     }
@@ -66,14 +53,16 @@ public class Bot extends TelegramLongPollingBot  {
             switch (mes.getText()){
                 case "НАЧАТЬ":
 
-                    setBeginTime(MyDate.getTimeNow());
+                    MyDate.setBeginTime(MyDate.getTimeNow());
+                    beginTime = MyDate.getBeginTime();
                     sendMsg(mes,"Начало работы :" + "\n" + beginTime.substring(0,19));
                     break;
 
                 case "ЗАКОНЧИТЬ":
-                    setEndtime(MyDate.getTimeNow());
-                    sendMsg(mes,"Время окончания работы: " + "\n" +  endtime.substring(0,19));
-                    sendMsg(mes,"Отработано за сегодня :" + "\n" + MyDate.workingHours(getBeginTime(),getEndtime()));
+                    MyDate.setEndtime(MyDate.getTimeNow());
+                    endTime = MyDate.getEndtime();
+                    sendMsg(mes,"Время окончания работы: " + "\n" +  endTime.substring(0,19));
+                    sendMsg(mes,"Отработано за сегодня :" + "\n" + MyDate.workingHours());
                     break;
 
                 case "/start":

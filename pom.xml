@@ -63,7 +63,7 @@
                     <programs>
                         <program>
                             <mainClass>Main</mainClass>
-                            <name>Bot</name>
+                            <user_name>Bot</user_name>
                         </program>
                     </programs>
                 </configuration>
