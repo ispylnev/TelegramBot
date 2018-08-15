@@ -1,7 +1,8 @@
 package Controls;
-
+import static java.lang.Math.toIntExact;
 import Utils.FileUtils;
 import Utils.MyDate;
+import database.MongoDbWork;
 import org.telegram.telegrambots.api.methods.send.SendMessage;
 import org.telegram.telegrambots.api.objects.Message;
 import org.telegram.telegrambots.api.objects.Update;
@@ -21,7 +22,10 @@ public class Bot extends TelegramLongPollingBot  {
     protected Bot(DefaultBotOptions options) {
         super(options);
     }
-
+    private MongoDbWork mongoDbWork = new MongoDbWork();
+    private String userName;
+    private String firstName;
+    private long userId;
     private String beginTime;
     private String endTime;
     private String botName = FileUtils.getBotName(properties);
@@ -49,6 +53,10 @@ public class Bot extends TelegramLongPollingBot  {
     @Override
     public void onUpdateReceived(Update update) {
         Message mes = update.getMessage();
+        userName = mes.getChat().getUserName();
+        firstName = mes.getChat().getFirstName();
+        userId = mes.getChat().getId();
+
         if (mes!=null && mes.hasText()){
             switch (mes.getText()){
                 case "НАЧАТЬ":
@@ -66,7 +74,9 @@ public class Bot extends TelegramLongPollingBot  {
                     break;
 
                 case "/start":
-                    sendMsg(mes,"Инициализция успешна"+"\n"+ "Можно работать");
+                    mongoDbWork.MongoDbWork();
+                    mongoDbWork.addUser(userName,firstName, toIntExact(userId));
+                    sendMsg(mes, firstName + ", " + "Инициализция успешна"+"\n"+ "Можно работать");
 
             }
 
