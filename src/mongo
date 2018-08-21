@@ -1,0 +1,13 @@
+BasicDBObject query = new BasicDBObject();
+query.put("suitename", testsuite);
+query.put("testname", testcase);
+
+BasicDBObject push = new BasicDBObject();
+push.put("$push",
+  new BasicDBObject("milestones",
+    new BasicDBObject("milestone_id", SampleProgram.milestone_id)));
+
+yourCollection.update(query, push);
+
+
+

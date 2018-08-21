@@ -6,6 +6,11 @@ import java.time.format.DateTimeFormatter;
 public class MyDate {
     private static String beginTime;
     private static String endTime;
+    private static long duration;
+
+    public static long getDuration() {
+        return duration;
+    }
 
 
     public static String getBeginTime() {
@@ -30,32 +35,40 @@ public class MyDate {
         return localDate + " " + localTime;
     }
 
-    public static String workingHours(){
+    public static long SetwWorkingHours(){
          try{
-             DateTimeFormatter formatterProxy = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSSSSSSSS");
-            LocalDateTime start = LocalDateTime.parse(beginTime, formatterProxy);
-            LocalDateTime end = LocalDateTime.parse(endTime, formatterProxy);
-            Duration duration = Duration.between(start, end);
-            //            System.out.println(gf);
-            return String.format("%dчасов %dминут %dсекунд(ы)%n",
+             DateTimeFormatter formatterProxy = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
+            LocalDateTime start = LocalDateTime.parse(beginTime.substring(0,23), formatterProxy);
+            LocalDateTime end = LocalDateTime.parse(endTime.substring(0,23), formatterProxy);
+             return MyDate.duration = Duration.between(start, end).toSeconds();
+//             return MyDate.duration =String.valueOf(Duration.between(start, end));
+
+//             duration =  String.format("%dчасов %dминут %dсекунд(ы)%n",
 //                    duration.toDays(),
-                    duration.toHours() % 24,
-                    duration.toMinutes() % 60,
-                    duration.toMillis() % 10);
+//                    duration.toHours() % 24,
+//                    duration.toMinutes() % 60,
+//                    duration.toMillis() % 10);
+
 
         } catch (DateTimeException e){
-            DateTimeFormatter formatterServer = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
-            LocalDateTime start = LocalDateTime.parse(beginTime, formatterServer);
-            LocalDateTime end = LocalDateTime.parse(endTime, formatterServer);
-            Duration duration = Duration.between(start, end);
-            //            System.out.println(gf);
-            return String.format("%dчасов %dминут %dсекунд%n",
-//                    duration.toDays(),
-                    duration.toHours() % 24,
-                    duration.toMinutes() % 60,
-                    duration.toMillis() % 10);
+
+            e.printStackTrace();
+//            DateTimeFormatter formatterServer = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
+//            LocalDateTime start = LocalDateTime.parse(beginTime, formatterServer);
+//            LocalDateTime end = LocalDateTime.parse(endTime, formatterServer);
+//            return MyDate.duration = String.valueOf(Duration.between(start, end));
+//            //            System.out.println(gf);
+////            return MyDate.duration =  String.format("%dчасов %dминут %dсекунд%n",
+//////                    duration.toDays(),
+////                    duration.toHours() % 24,
+////                    duration.toMinutes() % 60,
+////                    duration.toMillis() % 10);
         }
+        return duration = 0;
 
     }
+//    public String sumDuration(){
+//        return String sumDur;
+//    }
 
 }

@@ -18,7 +18,7 @@ import java.util.*;
 
 public class Bot extends TelegramLongPollingBot  {
     private Properties properties = new Properties();
-
+    private boolean check = true;
     protected Bot(DefaultBotOptions options) {
         super(options);
     }
@@ -28,6 +28,7 @@ public class Bot extends TelegramLongPollingBot  {
     private long userId;
     private String beginTime;
     private String endTime;
+    private Long duration;
     private String botName = FileUtils.getBotName(properties);
     private String token = FileUtils.getToken(properties);
 
@@ -56,25 +57,36 @@ public class Bot extends TelegramLongPollingBot  {
         userName = mes.getChat().getUserName();
         firstName = mes.getChat().getFirstName();
         userId = mes.getChat().getId();
-
         if (mes!=null && mes.hasText()){
             switch (mes.getText()){
                 case "НАЧАТЬ":
+                    if (check) {
+                        MyDate.setBeginTime(MyDate.getTimeNow());
+                        beginTime = MyDate.getBeginTime();
+                        sendMsg(mes, "Начало работы :" + "\n" + beginTime.substring(0, 19));
+                        check = false;
+                    }else sendMsg(mes,"необходимо закончить начатое");
+                        break;
 
-                    MyDate.setBeginTime(MyDate.getTimeNow());
-                    beginTime = MyDate.getBeginTime();
-                    sendMsg(mes,"Начало работы :" + "\n" + beginTime.substring(0,19));
-                    break;
 
                 case "ЗАКОНЧИТЬ":
-                    MyDate.setEndtime(MyDate.getTimeNow());
-                    endTime = MyDate.getEndtime();
-                    sendMsg(mes,"Время окончания работы: " + "\n" +  endTime.substring(0,19));
-                    sendMsg(mes,"Отработано за сегодня :" + "\n" + MyDate.workingHours());
-                    break;
+
+                    if(!check) {
+                        MyDate.setEndtime(MyDate.getTimeNow());
+                        endTime = MyDate.getEndtime();
+                        sendMsg(mes, "Время окончания работы: " + "\n" + endTime.substring(0, 19));
+//                    sendMsg(mes,"Отработано за сегодня :" + "\n" + MyDate.SetwWorkingHours());
+                        duration = MyDate.getDuration();
+                        mongoDbWork.updateDate(toIntExact(userId),"Data",MyDate.SetwWorkingHours());
+                        check = true;
+
+
+                    }else sendMsg(mes,"сначала начните");
+                        break;
+
 
                 case "/start":
-                    mongoDbWork.MongoDbWork();
+//                    mongoDbWork.MongoDbWork();
                     mongoDbWork.addUser(userName,firstName, toIntExact(userId));
                     sendMsg(mes, firstName + ", " + "Инициализция успешна"+"\n"+ "Можно работать");
 

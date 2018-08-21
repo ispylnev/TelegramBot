@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class FileUtils {
-
+//todo разобраться с закрытием файла
     private static FileInputStream fileInputStream = null;
 
     public static FileInputStream openFile(String file){
@@ -29,6 +29,7 @@ public class FileUtils {
         }
         return (String)properties.get("proxy");
 
+
     }
 
     public static String  getProxyPassword(Properties properties)  {
@@ -38,7 +39,7 @@ public class FileUtils {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    return (String) properties.get("proxyPassword");
+        return (String) properties.get("proxyPassword");
 
     }
 
