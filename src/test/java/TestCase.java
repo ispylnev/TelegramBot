@@ -6,9 +6,12 @@ import org.junit.Before;
 import org.junit.Test;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
+
 public class TestCase {
     private MongoDatabase database;
     private MongoCollection<Document> mongoCollection;
+   private long sum = 0;
 
 
 
@@ -55,28 +58,10 @@ public class TestCase {
     public void sumDuration() {
         Document found = (Document) mongoCollection.find(new Document("userName", "ispylnev")).first();
         ArrayList<Long> a = (ArrayList<Long>) found.get("Data");
-        long b = a.get(0)+a.get(1)+a.get(2);
-        Duration duration;
-        duration.get(b);
-        duration.
-        System.out.println(duration);
-        System.out.println(duration.toMinutes()%60);
-
-
-//                    duration.toHours() % 24,
-//                    duration.toMinutes() % 60,
-//                    duration.toMillis() % 10););
-
-
-//        Duration duration1;
-//        Duration duration2;
-//        for (int i =0; i<a.size();i++){
-//           Duration af= a.get(i).plus(a.get(i++));
-//            Duration sum = duration1.plus(a.get(i++));
-//            System.out.println(sum.toHours());
-//            System.out.println(a.get(0).toSeconds()) ;
-
-//    }
+        for(int i=0;i<a.size();i++){
+            sum += a.get(i);
+            System.out.println(TimeUnit.SECONDS.toDays(sum));
+        }
     }
 }
 

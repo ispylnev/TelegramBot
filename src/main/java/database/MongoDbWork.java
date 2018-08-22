@@ -4,6 +4,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
+import java.util.ArrayList;
 
 
 public class MongoDbWork {
@@ -33,14 +34,26 @@ public class MongoDbWork {
       }
 
    }
-
+//обновляет существующй документ путем добавления продолжительности в виде секунд
    public void updateDate(int userId,String nameArray,long dateToLong){
      collection =  database.getCollection("user");
-     Document found = (Document) collection.find(new Document("userId",userId)).first();
+     Document found = collection.find(new Document("userId",userId)).first();
      BasicDBObject basicDBObject = new BasicDBObject();
      basicDBObject.put("$push",new BasicDBObject(nameArray,dateToLong));
      collection.updateOne(found,basicDBObject);
 
    }
 
+   public Document queryDoc(int userId){
+      return collection.find(new Document("userId",userId)).first();
+   }
+
+   public long queryWorkingHourse(Document document,String date){
+     ArrayList<Long> arrayDate = (ArrayList<Long>)document.get(date);
+     long sum = 0;
+     for(int i = 0;i < arrayDate.size();i++){
+         sum = sum + arrayDate.get(i);
+     }
+     return sum;
+   }
 }

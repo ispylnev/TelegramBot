@@ -3,6 +3,7 @@ import static java.lang.Math.toIntExact;
 import Utils.FileUtils;
 import Utils.MyDate;
 import database.MongoDbWork;
+import org.bson.Document;
 import org.telegram.telegrambots.api.methods.send.SendMessage;
 import org.telegram.telegrambots.api.objects.Message;
 import org.telegram.telegrambots.api.objects.Update;
@@ -14,6 +15,7 @@ import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.exceptions.TelegramApiException;
 
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 
 public class Bot extends TelegramLongPollingBot  {
@@ -77,7 +79,8 @@ public class Bot extends TelegramLongPollingBot  {
                         sendMsg(mes, "Время окончания работы: " + "\n" + endTime.substring(0, 19));
 //                    sendMsg(mes,"Отработано за сегодня :" + "\n" + MyDate.SetwWorkingHours());
                         duration = MyDate.getDuration();
-                        mongoDbWork.updateDate(toIntExact(userId),"Data",MyDate.SetwWorkingHours());
+                        //обнавляем даты в массиве
+                        mongoDbWork.updateDate(toIntExact(userId),beginTime.substring(0,10),MyDate.SetwWorkingHours());
                         check = true;
 
 
@@ -86,9 +89,21 @@ public class Bot extends TelegramLongPollingBot  {
 
 
                 case "/start":
-//                    mongoDbWork.MongoDbWork();
+//
                     mongoDbWork.addUser(userName,firstName, toIntExact(userId));
                     sendMsg(mes, firstName + ", " + "Инициализция успешна"+"\n"+ "Можно работать");
+                    break;
+
+                default:
+                    String date = mes.getText();
+                    Document queryDoc = mongoDbWork.queryDoc(toIntExact(userId));
+                    Long sumSeconds = mongoDbWork.queryWorkingHourse(queryDoc,date);
+                   String parseSeconds =  String.format("%dчасов %dминут %dсекунд%n",
+                   TimeUnit.SECONDS.toDays(sumSeconds),
+                   TimeUnit.SECONDS.toHours(sumSeconds),
+                   TimeUnit.SECONDS.toSeconds(sumSeconds));
+                   sendMsg(mes, parseSeconds);
+
 
             }
 

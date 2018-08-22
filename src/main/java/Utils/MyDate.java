@@ -34,21 +34,13 @@ public class MyDate {
         String localTime = String.valueOf(LocalTime.now());
         return localDate + " " + localTime;
     }
-
+//Считает общую прожолжительность работы . И возвращает результат в секундах . Подумать на тем стоит ли добавлять переменные в метод
     public static long SetwWorkingHours(){
          try{
              DateTimeFormatter formatterProxy = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
             LocalDateTime start = LocalDateTime.parse(beginTime.substring(0,23), formatterProxy);
             LocalDateTime end = LocalDateTime.parse(endTime.substring(0,23), formatterProxy);
              return MyDate.duration = Duration.between(start, end).toSeconds();
-//             return MyDate.duration =String.valueOf(Duration.between(start, end));
-
-//             duration =  String.format("%dчасов %dминут %dсекунд(ы)%n",
-//                    duration.toDays(),
-//                    duration.toHours() % 24,
-//                    duration.toMinutes() % 60,
-//                    duration.toMillis() % 10);
-
 
         } catch (DateTimeException e){
 
@@ -58,17 +50,14 @@ public class MyDate {
 //            LocalDateTime end = LocalDateTime.parse(endTime, formatterServer);
 //            return MyDate.duration = String.valueOf(Duration.between(start, end));
 //            //            System.out.println(gf);
-////            return MyDate.duration =  String.format("%dчасов %dминут %dсекунд%n",
-//////                    duration.toDays(),
-////                    duration.toHours() % 24,
-////                    duration.toMinutes() % 60,
-////                    duration.toMillis() % 10);
+//            return MyDate.duration =  String.format("%dчасов %dминут %dсекунд%n",
+//                   duration.toDays(),
+//                   duration.toHours() % 24,
+//                   duration.toMinutes() % 60,
+//                   duration.toMillis() % 10);
         }
         return duration = 0;
 
     }
-//    public String sumDuration(){
-//        return String sumDur;
-//    }
 
 }
