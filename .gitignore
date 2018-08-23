@@ -1,3 +1,4 @@
 .idea/
-target
-mongo.txt
+/target/*
+/mongo.txt
+/properties.dat

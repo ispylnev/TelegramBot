@@ -45,7 +45,8 @@ public class MongoDbWork {
    }
 
    public Document queryDoc(int userId){
-      return collection.find(new Document("userId",userId)).first();
+
+      return database.getCollection("user").find(new Document("userId",userId)).first();
    }
 
    public long queryWorkingHourse(Document document,String date){

@@ -99,9 +99,9 @@ public class Bot extends TelegramLongPollingBot  {
                     Document queryDoc = mongoDbWork.queryDoc(toIntExact(userId));
                     Long sumSeconds = mongoDbWork.queryWorkingHourse(queryDoc,date);
                    String parseSeconds =  String.format("%dчасов %dминут %dсекунд%n",
-                   TimeUnit.SECONDS.toDays(sumSeconds),
-                   TimeUnit.SECONDS.toHours(sumSeconds),
-                   TimeUnit.SECONDS.toSeconds(sumSeconds));
+                   TimeUnit.MILLISECONDS.toDays(sumSeconds),
+                   TimeUnit.MILLISECONDS.toHours(sumSeconds),
+                   TimeUnit.MILLISECONDS.toSeconds(sumSeconds));
                    sendMsg(mes, parseSeconds);
 
 
