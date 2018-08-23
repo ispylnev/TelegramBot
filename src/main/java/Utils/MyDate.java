@@ -41,6 +41,7 @@ public class MyDate {
             LocalDateTime start = LocalDateTime.parse(beginTime.substring(0,23), formatterProxy);
             LocalDateTime end = LocalDateTime.parse(endTime.substring(0,23), formatterProxy);
             MyDate.duration = Duration.between(start, end).toMillis();
+             System.out.println(duration);
 
 
 
