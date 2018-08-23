@@ -40,7 +40,8 @@ public class MyDate {
              DateTimeFormatter formatterProxy = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
             LocalDateTime start = LocalDateTime.parse(beginTime.substring(0,23), formatterProxy);
             LocalDateTime end = LocalDateTime.parse(endTime.substring(0,23), formatterProxy);
-             return MyDate.duration = Duration.between(start, end).toSeconds();
+//             return MyDate.duration = Duration.between(start, end).toSeconds();
+             return 0;
 
         } catch (DateTimeException e){
 
