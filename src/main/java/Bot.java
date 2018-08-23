@@ -103,8 +103,9 @@ public class Bot extends TelegramLongPollingBot  {
                    String parseSeconds =  String.format("%dчасов %dминут %dсекунд%n",
                    TimeUnit.MILLISECONDS.toDays(sumSeconds),
                    TimeUnit.MILLISECONDS.toHours(sumSeconds),
-                   TimeUnit.MILLISECONDS.toMinutes(sumSeconds),
+//                   TimeUnit.MILLISECONDS.toMinutes(sumSeconds),
                    TimeUnit.MILLISECONDS.toSeconds(sumSeconds));
+                    System.out.println(parseSeconds);
                    sendMsg(mes, parseSeconds);
 
 
