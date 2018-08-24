@@ -126,7 +126,9 @@ public class Bot extends TelegramLongPollingBot  {
                     EditMessageText messageText = new EditMessageText()
                             .setChatId(chatId)
                             .setMessageId(toIntExact(mesId))
-                            .setText("Проверка");
+                            .setText("Для начала отсчета времени нажмите кнопку Начать"+"\n"+
+                            "Для того чтобы закончить нажмите кнопку Закночить"+"\n"+
+                                    "Для вывода суммарно отработаного времени введите в чат дату в формате ХХХХ-ХХ-ХХ");
                 try{
                     editMessageText(messageText);
                 }catch (TelegramApiException e){
