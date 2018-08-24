@@ -30,6 +30,7 @@ public class Bot extends TelegramLongPollingBot  {
     private MongoDbWork mongoDbWork = new MongoDbWork();
     private String userName;
     private String firstName;
+    private long mesId;
     private long chatId;
     private long userId;
     private String beginTime;
@@ -67,6 +68,7 @@ public class Bot extends TelegramLongPollingBot  {
               firstName = mes.getChat().getFirstName();
               chatId = mes.getChatId();
               userId = mes.getChat().getId();
+              mesId = mes.getMessageId();
               switch (mes.getText()){
                 case "НАЧАТЬ":
                     if (check) {
@@ -96,8 +98,8 @@ public class Bot extends TelegramLongPollingBot  {
 
 
                 case "/start":
-//
-//                    mongoDbWork.addUser(userName,firstName, toIntExact(userId));
+
+                    mongoDbWork.addUser(userName,firstName, toIntExact(userId));
                     sendMsg(mes, firstName + ", " + "Инициализция успешна"+"\n"+ "Можно работать");
                     SendMessage sendMessage = new SendMessage();
                     setIlnineKeyboard(sendMessage);
@@ -119,14 +121,15 @@ public class Bot extends TelegramLongPollingBot  {
 
         }else if (update.hasCallbackQuery()) {
             String callData = update.getCallbackQuery().getData();
-            long mesId = update.getMessage().getMessageId();
-            long chatId = update.getMessage().getChatId();
+//            long mesId = update.getMessage().getMessageId();
+//            long chatId = update.getMessage().getChatId();
             if (callData.equals("test")){
-                EditMessageText messageText = new EditMessageText().setChatId(chatId)
+                EditMessageText messageText = new EditMessageText()
+                        .setChatId(chatId)
                         .setMessageId(toIntExact(mesId))
                         .setText("Проверка");
                 try{
-                    execute(messageText);
+                    editMessageText(messageText);
                 }catch (TelegramApiException e){
                     e.printStackTrace();
                 }
@@ -175,7 +178,7 @@ public class Bot extends TelegramLongPollingBot  {
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> inlineKeyboardButtonList = new ArrayList<>();
         List<InlineKeyboardButton> keyboardRow = new ArrayList<>();
-        keyboardRow.add(new InlineKeyboardButton().setText("Да").setCallbackData("Test"));
+        keyboardRow.add(new InlineKeyboardButton().setText("Да").setCallbackData("test"));
         inlineKeyboardButtonList.add(keyboardRow);
         inlineKeyboardMarkup.setKeyboard(inlineKeyboardButtonList);
         sendMessage.setReplyMarkup(inlineKeyboardMarkup);
