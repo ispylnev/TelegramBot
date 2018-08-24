@@ -59,13 +59,15 @@ public class Bot extends TelegramLongPollingBot  {
 
     @Override
     public void onUpdateReceived(Update update) {
-        Message mes = update.getMessage();
-        if (mes!=null && mes.hasText()){
-            userName = mes.getChat().getUserName();
-            firstName = mes.getChat().getFirstName();
-            chatId = mes.getChatId();
-            userId = mes.getChat().getId();
-            switch (mes.getText()){
+//        Message mes = update.getMessage();
+//        if (mes!=null && mes.hasText()){
+          if (update.hasMessage() && update.getMessage().hasText()){
+              Message mes = update.getMessage();
+              userName = mes.getChat().getUserName();
+              firstName = mes.getChat().getFirstName();
+              chatId = mes.getChatId();
+              userId = mes.getChat().getId();
+              switch (mes.getText()){
                 case "НАЧАТЬ":
                     if (check) {
                         MyDate.setBeginTime(MyDate.getTimeNow());
@@ -95,11 +97,10 @@ public class Bot extends TelegramLongPollingBot  {
 
                 case "/start":
 //
-                    mongoDbWork.addUser(userName,firstName, toIntExact(userId));
+//                    mongoDbWork.addUser(userName,firstName, toIntExact(userId));
                     sendMsg(mes, firstName + ", " + "Инициализция успешна"+"\n"+ "Можно работать");
                     SendMessage sendMessage = new SendMessage();
                     setIlnineKeyboard(sendMessage);
-
                     break;
 
                 default:
@@ -167,7 +168,8 @@ public class Bot extends TelegramLongPollingBot  {
         replyKeyboardMarkup.setKeyboard(keyboardRowsList);
 
     }
-    public void setIlnineKeyboard(SendMessage sendMessage){
+
+    public SendMessage setIlnineKeyboard(SendMessage sendMessage){
         sendMessage.setChatId(chatId);
         sendMessage.setText("Прочтете краткую инструкцию?");
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
@@ -178,10 +180,11 @@ public class Bot extends TelegramLongPollingBot  {
         inlineKeyboardMarkup.setKeyboard(inlineKeyboardButtonList);
         sendMessage.setReplyMarkup(inlineKeyboardMarkup);
         try{
-            execute(sendMessage);
+          execute(sendMessage);
         }catch (TelegramApiException e){
             e.printStackTrace();
         }
+        return sendMessage;
 
     }
 

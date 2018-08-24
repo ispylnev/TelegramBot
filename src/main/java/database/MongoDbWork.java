@@ -14,8 +14,8 @@ public class MongoDbWork {
    private MongoCollection <Document> collection;
 
    public MongoDbWork(){ //Todo оптимизация на пулл соединений или хотя-бы сделать закрытие после каждого запроса к бд
-      connection = new MongoClient(new MongoClientURI("mongodb://admin:admin123@ds217002.mlab.com:17002/telebot"));
-      database = connection.getDatabase("telebot");
+//      connection = new MongoClient(new MongoClientURI("mongodb://admin:admin123@ds217002.mlab.com:17002/telebot"));
+//      database = connection.getDatabase("telebot");
       System.out.println("Connect MongoDB--->OK");//Todo log
    }
 
