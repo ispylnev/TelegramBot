@@ -17,6 +17,8 @@ import org.telegram.telegrambots.bots.DefaultBotOptions;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.exceptions.TelegramApiException;
 
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
@@ -107,11 +109,13 @@ public class Bot extends TelegramLongPollingBot  {
                     String date = mes.getText();
                     Document queryDoc = mongoDbWork.queryDoc(toIntExact(userId));
                     Long sumSeconds = mongoDbWork.queryWorkingHourse(queryDoc,date);
-                   String parseSeconds =  String.format("%dчасов %dминут %dсекунд%n",
-                   TimeUnit.MILLISECONDS.toHours(sumSeconds),
-                   TimeUnit.MILLISECONDS.toMinutes(sumSeconds),
-                   TimeUnit.MILLISECONDS.toSeconds(sumSeconds));
-                   sendMsg(mes, parseSeconds);
+                    long convertToSec = TimeUnit.MILLISECONDS.toSeconds(sumSeconds);
+                    LocalTime sumwork = LocalTime.ofSecondOfDay(convertToSec);
+//                   String parseSeconds =  String.format("%dчасов %dминут %dсекунд%n",
+//                   TimeUnit.MILLISECONDS.toHours(sumSeconds),
+//                   TimeUnit.MILLISECONDS.toMinutes(sumSeconds),
+//                   TimeUnit.MILLISECONDS.toSeconds(sumSeconds));
+                   sendMsg(mes,String.valueOf(sumwork));
 
 
 

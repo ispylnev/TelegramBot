@@ -31,7 +31,7 @@ public class MyDate {
 
     public static String getTimeNow() {
         String localDate = String.valueOf(LocalDate.now());
-        String localTime = String.valueOf(LocalTime.now());
+        String localTime = String.valueOf(LocalTime.now().plusHours(3));
         return localDate + " " + localTime;
     }
 //Считает общую прожолжительность работы . И возвращает результат в секундах . Подумать на тем стоит ли добавлять переменные в метод

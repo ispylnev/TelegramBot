@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a48b808f-5503-480d-97eb-c0442c165204" name="Default" comment="" />
+    <list default="true" id="a48b808f-5503-480d-97eb-c0442c165204" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controls/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controls/Bot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/MyDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/MyDate.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,7 +35,7 @@
       <file leaf-file-name="TestCase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/TestCase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-925">
+            <state relative-caret-position="68">
               <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -43,8 +47,8 @@
       <file leaf-file-name="Bot.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Controls/Bot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="130" column="117" selection-start-line="130" selection-start-column="117" selection-end-line="130" selection-end-column="117" />
+            <state relative-caret-position="289">
+              <caret line="117" column="54" selection-start-line="117" selection-start-column="54" selection-end-line="117" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,8 +59,8 @@
       <file leaf-file-name="MongoDbWork.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/database/MongoDbWork.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-102">
-              <caret line="18" column="60" lean-forward="true" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+            <state relative-caret-position="221">
+              <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,7 +71,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-265">
+            <state relative-caret-position="867">
               <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
               <folding>
                 <marker date="1535044857897" expanded="true" signature="804:973" ph="..." />
@@ -79,7 +83,7 @@
       <file leaf-file-name="ServerProperties.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Controls/ServerProperties.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7">
+            <state relative-caret-position="442">
               <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -91,8 +95,8 @@
       <file leaf-file-name="MyDate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Utils/MyDate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="-312">
+              <caret line="34" column="43" lean-forward="true" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -153,9 +157,9 @@
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/properties.dat" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/Utils/MyDate.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/database/MongoDbWork.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/MyDate.java" />
         <option value="$PROJECT_DIR$/src/main/java/Controls/Bot.java" />
       </list>
     </option>
@@ -189,8 +193,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="499" />
-    <option name="y" value="37" />
+    <option name="x" value="498" />
+    <option name="y" value="36" />
     <option name="width" value="1185" />
     <option name="height" value="936" />
   </component>
@@ -200,7 +204,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -272,8 +275,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -463,20 +467,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1531762660175</updated>
-    </task>
-    <task id="LOCAL-00007" summary="commit">
-      <created>1532117160131</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1532117160131</updated>
-    </task>
-    <task id="LOCAL-00008" summary="commit">
-      <created>1532117339993</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1532117339993</updated>
     </task>
     <task id="LOCAL-00009" summary="commit">
       <created>1532117792563</created>
@@ -807,7 +797,21 @@
       <option name="project" value="LOCAL" />
       <updated>1535103745862</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="1.1 Исправил формат сообщения">
+      <created>1535104471406</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1535104471407</updated>
+    </task>
+    <task id="LOCAL-00057" summary="1.1 Форматирование времени">
+      <created>1535105061351</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1535105061351</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -853,10 +857,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3291592" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49959514" weight="0.17889088" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
@@ -864,10 +868,10 @@
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.25263157" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.41323793" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49959514" weight="0.6135957" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.37745973" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.29159212" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.81666666" visible="true" weight="0.21781376" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.81666666" visible="true" weight="0.22186235" />
       <window_info id="Structure" order="1" sideWeight="0.502439" side_tool="true" weight="0.22024292" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.021862349" />
       <window_info id="UI Designer" order="4" />
@@ -881,34 +885,35 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32737032" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49959514" weight="0.17889088" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3291592" />
+      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32955465" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25223613" />
       <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756098" weight="0.3898305" />
       <window_info id="Structure" order="1" sideWeight="0.502439" side_tool="true" weight="0.22024292" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.021862349" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3291592" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25223613" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291592" />
-      <window_info anchor="right" id="Maven Projects" order="7" weight="0.20323886" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.31842577" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.34168157" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3291592" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.21466905" />
-      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32955465" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.20323886" />
       <window_info id="Favorites" order="5" sideWeight="0.5012285" side_tool="true" weight="0.22024292" />
     </layout-to-restore>
   </component>
@@ -942,8 +947,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Исправил gitignore" />
-    <MESSAGE value="Изменена логика работы" />
     <MESSAGE value="Изменил логику" />
     <MESSAGE value="Корректировка кнопок &quot;начать&quot; &#10;&quot;Закончить&quot;" />
     <MESSAGE value="Для теста" />
@@ -967,7 +970,9 @@
     <MESSAGE value="добавил инлайн клавиатуру попытка отладить клавиатуру номер 2" />
     <MESSAGE value="добавил инлайн клавиатуру попытка отладить клавиатуру номер 3" />
     <MESSAGE value="Релиз 1.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Релиз 1.1" />
+    <MESSAGE value="1.1 Исправил формат сообщения" />
+    <MESSAGE value="1.1 Форматирование времени" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.1 Форматирование времени" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1258,9 +1263,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-713">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1313,19 +1315,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestCase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-925">
-          <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-265">
+        <state relative-caret-position="867">
           <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
           <folding>
             <marker date="1535044857897" expanded="true" signature="804:973" ph="..." />
@@ -1335,18 +1327,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Controls/ServerProperties.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7">
+        <state relative-caret-position="442">
           <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/MyDate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
         </state>
       </provider>
     </entry>
@@ -1361,9 +1346,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#469#470#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1374,20 +1356,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/database/MongoDbWork.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestCase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="18" column="60" lean-forward="true" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+        <state relative-caret-position="68">
+          <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/database/MongoDbWork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/MyDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-312">
+          <caret line="34" column="43" lean-forward="true" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Controls/Bot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="130" column="117" selection-start-line="130" selection-start-column="117" selection-end-line="130" selection-end-column="117" />
+        <state relative-caret-position="289">
+          <caret line="117" column="54" selection-start-line="117" selection-start-column="54" selection-end-line="117" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
