@@ -5,9 +5,12 @@ import Utils.MyDate;
 import database.MongoDbWork;
 import org.bson.Document;
 import org.telegram.telegrambots.api.methods.send.SendMessage;
+import org.telegram.telegrambots.api.methods.updatingmessages.EditMessageText;
 import org.telegram.telegrambots.api.objects.Message;
 import org.telegram.telegrambots.api.objects.Update;
+import org.telegram.telegrambots.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.api.objects.replykeyboard.ReplyKeyboardMarkup;
+import org.telegram.telegrambots.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 import org.telegram.telegrambots.api.objects.replykeyboard.buttons.KeyboardButton;
 import org.telegram.telegrambots.api.objects.replykeyboard.buttons.KeyboardRow;
 import org.telegram.telegrambots.bots.DefaultBotOptions;
@@ -27,6 +30,7 @@ public class Bot extends TelegramLongPollingBot  {
     private MongoDbWork mongoDbWork = new MongoDbWork();
     private String userName;
     private String firstName;
+    private long chatId;
     private long userId;
     private String beginTime;
     private String endTime;
@@ -56,10 +60,11 @@ public class Bot extends TelegramLongPollingBot  {
     @Override
     public void onUpdateReceived(Update update) {
         Message mes = update.getMessage();
-        userName = mes.getChat().getUserName();
-        firstName = mes.getChat().getFirstName();
-        userId = mes.getChat().getId();
         if (mes!=null && mes.hasText()){
+            userName = mes.getChat().getUserName();
+            firstName = mes.getChat().getFirstName();
+            chatId = mes.getChatId();
+            userId = mes.getChat().getId();
             switch (mes.getText()){
                 case "НАЧАТЬ":
                     if (check) {
@@ -92,6 +97,9 @@ public class Bot extends TelegramLongPollingBot  {
 //
                     mongoDbWork.addUser(userName,firstName, toIntExact(userId));
                     sendMsg(mes, firstName + ", " + "Инициализция успешна"+"\n"+ "Можно работать");
+                    SendMessage sendMessage = new SendMessage();
+                    setIlnineKeyboard(sendMessage);
+
                     break;
 
                 default:
@@ -105,9 +113,26 @@ public class Bot extends TelegramLongPollingBot  {
                    sendMsg(mes, parseSeconds);
 
 
+
             }
 
+        }else if (update.hasCallbackQuery()) {
+            String callData = update.getCallbackQuery().getData();
+            long mesId = update.getMessage().getMessageId();
+            long chatId = update.getMessage().getChatId();
+            if (callData.equals("test")){
+                EditMessageText messageText = new EditMessageText().setChatId(chatId)
+                        .setMessageId(toIntExact(mesId))
+                        .setText("Проверка");
+                try{
+                    execute(messageText);
+                }catch (TelegramApiException e){
+                    e.printStackTrace();
+                }
+
+            }
         }
+
 
     }
 
@@ -140,6 +165,23 @@ public class Bot extends TelegramLongPollingBot  {
         keyboardRowsList.add(keyboardFirstRow);
 //        Устанавливаем список клавиатуре
         replyKeyboardMarkup.setKeyboard(keyboardRowsList);
+
+    }
+    public void setIlnineKeyboard(SendMessage sendMessage){
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Прочтете краткую инструкцию?");
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> inlineKeyboardButtonList = new ArrayList<>();
+        List<InlineKeyboardButton> keyboardRow = new ArrayList<>();
+        keyboardRow.add(new InlineKeyboardButton().setText("Да").setCallbackData("Test"));
+        inlineKeyboardButtonList.add(keyboardRow);
+        inlineKeyboardMarkup.setKeyboard(inlineKeyboardButtonList);
+        sendMessage.setReplyMarkup(inlineKeyboardMarkup);
+        try{
+            execute(sendMessage);
+        }catch (TelegramApiException e){
+            e.printStackTrace();
+        }
 
     }
 
