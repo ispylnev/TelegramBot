@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a48b808f-5503-480d-97eb-c0442c165204" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controls/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controls/Bot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/MongoDbWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/MongoDbWork.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -46,8 +46,8 @@
       <file leaf-file-name="Bot.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Controls/Bot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="131" selection-start-line="131" selection-end-line="131" />
+            <state relative-caret-position="-391">
+              <caret line="68" column="45" selection-start-line="68" selection-start-column="45" selection-end-line="68" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -58,8 +58,8 @@
       <file leaf-file-name="MongoDbWork.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/database/MongoDbWork.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="18" column="60" lean-forward="true" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+            <state relative-caret-position="-218">
+              <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -467,13 +467,6 @@
       <option name="presentableId" value="Default" />
       <updated>1531762660175</updated>
     </task>
-    <task id="LOCAL-00004" summary="commit">
-      <created>1532114985627</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1532114985627</updated>
-    </task>
     <task id="LOCAL-00005" summary="commit">
       <created>1532115923267</created>
       <option name="number" value="00005" />
@@ -810,7 +803,14 @@
       <option name="project" value="LOCAL" />
       <updated>1535100916606</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="добавил инлайн клавиатуру попытка отладить клавиатуру номер 2">
+      <created>1535102135310</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1535102135310</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -856,7 +856,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3291592" />
@@ -867,8 +866,8 @@
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50040483" side_tool="true" weight="0.47763863" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.25263157" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.41323793" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49959514" visible="true" weight="0.2701252" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3309481" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49959514" weight="0.8121646" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3685152" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="3" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.81666666" visible="true" weight="0.21781376" />
@@ -946,7 +945,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Добавил загрузку настроек из файла&#10;Добавил выбор подключения" />
     <MESSAGE value="исправил pom" />
     <MESSAGE value="Добавил клавиатруру" />
     <MESSAGE value="Исправил gitignore" />
@@ -971,7 +969,8 @@
     <MESSAGE value="смена секунд на милисекунды тест 4" />
     <MESSAGE value="добавил инлайн клавиатуру" />
     <MESSAGE value="добавил инлайн клавиатуру попытка отладить клавиатуру номер 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил инлайн клавиатуру попытка отладить клавиатуру номер 1" />
+    <MESSAGE value="добавил инлайн клавиатуру попытка отладить клавиатуру номер 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил инлайн клавиатуру попытка отладить клавиатуру номер 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1000,7 +999,7 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string />
+        <expression-string>long chatId = update.getMessage().getChatId();</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -1010,7 +1009,7 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string />
+        <expression-string>String callData = update.getCallbackQuery().getData();</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -1025,7 +1024,7 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string />
+        <expression-string>MongoCollection &lt;Document&gt; mongoCollection  = database.getCollection(&quot;users&quot;)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -1380,8 +1379,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/database/MongoDbWork.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="18" column="60" lean-forward="true" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+        <state relative-caret-position="-218">
+          <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1390,8 +1389,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Controls/Bot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="131" selection-start-line="131" selection-end-line="131" />
+        <state relative-caret-position="-391">
+          <caret line="68" column="45" selection-start-line="68" selection-start-column="45" selection-end-line="68" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

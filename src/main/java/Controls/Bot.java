@@ -30,7 +30,6 @@ public class Bot extends TelegramLongPollingBot  {
     private MongoDbWork mongoDbWork = new MongoDbWork();
     private String userName;
     private String firstName;
-    private long mesId;
     private long chatId;
     private long userId;
     private String beginTime;
@@ -68,7 +67,6 @@ public class Bot extends TelegramLongPollingBot  {
               firstName = mes.getChat().getFirstName();
               chatId = mes.getChatId();
               userId = mes.getChat().getId();
-              mesId = mes.getMessageId();
               switch (mes.getText()){
                 case "НАЧАТЬ":
                     if (check) {
@@ -121,13 +119,14 @@ public class Bot extends TelegramLongPollingBot  {
 
         }else if (update.hasCallbackQuery()) {
             String callData = update.getCallbackQuery().getData();
-//            long mesId = update.getMessage().getMessageId();
-//            long chatId = update.getMessage().getChatId();
-            if (callData.equals("test")){
-                EditMessageText messageText = new EditMessageText()
-                        .setChatId(chatId)
-                        .setMessageId(toIntExact(mesId))
-                        .setText("Проверка");
+
+            long mesId = update.getCallbackQuery().getMessage().getMessageId();
+                long chatId = update.getCallbackQuery().getMessage().getChatId();
+                if (callData.equals("test")){
+                    EditMessageText messageText = new EditMessageText()
+                            .setChatId(chatId)
+                            .setMessageId(toIntExact(mesId))
+                            .setText("Проверка");
                 try{
                     editMessageText(messageText);
                 }catch (TelegramApiException e){
