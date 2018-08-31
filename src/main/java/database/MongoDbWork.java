@@ -2,34 +2,44 @@ package database;
 import com.mongodb.*;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.bson.Document;
-
 import java.util.ArrayList;
 
 
+
 public class MongoDbWork {
+    final Logger databaseLogger = LogManager.getLogger(MongoDbWork.class);
 
-   private MongoClient connection;
-   private MongoDatabase database;
-   private MongoCollection <Document> collection;
+    private MongoClient connection;
+    private MongoDatabase database;
+    private MongoCollection <Document> collection;
 
-   public MongoDbWork(){ //Todo оптимизация на пулл соединений или хотя-бы сделать закрытие после каждого запроса к бд
-      connection = new MongoClient(new MongoClientURI("mongodb://admin:admin123@ds217002.mlab.com:17002/telebot"));
-      database = connection.getDatabase("telebot");
-      System.out.println("Connect MongoDB--->OK");//Todo log
+
+   public MongoDbWork() { //Todo оптимизация на пулл соединений или хотя-бы сделать закрытие после каждого запроса к бд
+//       java.util.logging.Logger.getLogger("org.mongodb.driver").setLevel(Level.OFF);
+           connection = new MongoClient(new MongoClientURI("mongodb://admin:admin1223@ds217002.mlab.com:17002/telebot"));
+           database = connection.getDatabase("telebot");
+       try {
+           databaseLogger.info("connect Mongo database --->OK");
+       }catch (MongoException e) {
+           databaseLogger.fatal("connect Error "+ e.getMessage());
+       }
    }
 
-   public  void addUser(String userName,String firstName, int userId ){
+   public  void addUser(String userName,String firstName, int userId ) {
+
       collection = database.getCollection("user");
       long found = collection.count(Document.parse("{userId : " + Integer.toString(userId) + "}"));
-      if (found == 0){
-         System.out.println(found);
-         Document document = new Document();
-         document.append("userName",userName)
-                 .append("firstName",firstName)
-                 .append("userId",userId);
-         collection.insertOne(document);
-         System.out.println("Add user ok"); //todo log
+      if (found == 0) {
+          System.out.println(found);
+          Document document = new Document();
+          document.append("userName", userName)
+                  .append("firstName", firstName)
+                  .append("userId", userId);
+          collection.insertOne(document);
+          databaseLogger.info("Add user Ok");
 //         connection.close();
       }
 

@@ -16,8 +16,6 @@ import org.telegram.telegrambots.api.objects.replykeyboard.buttons.KeyboardRow;
 import org.telegram.telegrambots.bots.DefaultBotOptions;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.exceptions.TelegramApiException;
-
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
@@ -25,7 +23,6 @@ import java.util.concurrent.TimeUnit;
 
 public class Bot extends TelegramLongPollingBot  {
     private Properties properties = new Properties();
-    private boolean check = true;
     protected Bot(DefaultBotOptions options) {
         super(options);
     }
@@ -39,6 +36,7 @@ public class Bot extends TelegramLongPollingBot  {
     private Long duration;
     private String botName = FileUtils.getBotName(properties);
     private String token = FileUtils.getToken(properties);
+    boolean check = true;
 
 
     public Bot() {
@@ -61,8 +59,7 @@ public class Bot extends TelegramLongPollingBot  {
 
     @Override
     public void onUpdateReceived(Update update) {
-//        Message mes = update.getMessage();
-//        if (mes!=null && mes.hasText()){
+
           if (update.hasMessage() && update.getMessage().hasText()){
               Message mes = update.getMessage();
               userName = mes.getChat().getUserName();
@@ -76,6 +73,7 @@ public class Bot extends TelegramLongPollingBot  {
                         beginTime = MyDate.getBeginTime();
                         sendMsg(mes, "Начало работы :" + "\n" + beginTime.substring(0, 19));
                         check = false;
+
                     }else sendMsg(mes,"необходимо закончить начатое");
                         break;
 
@@ -116,9 +114,6 @@ public class Bot extends TelegramLongPollingBot  {
 //                   TimeUnit.MILLISECONDS.toMinutes(sumSeconds),
 //                   TimeUnit.MILLISECONDS.toSeconds(sumSeconds));
                    sendMsg(mes,String.valueOf(sumwork));
-
-
-
 
             }
 
