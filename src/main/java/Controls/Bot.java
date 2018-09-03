@@ -68,6 +68,7 @@ public class Bot extends TelegramLongPollingBot  {
               userId = mes.getChat().getId();
               switch (mes.getText()){
                 case "НАЧАТЬ":
+                    check =
                     if (check) {
                         MyDate.setBeginTime(MyDate.getTimeNow());
                         beginTime = MyDate.getBeginTime();
