@@ -19,6 +19,9 @@
         <Logger name= "database" level="all" additivity="false">
             <AppenderRef ref="Console"/>
         </Logger>
+        <Logger name= "Utils.MyDate" level="all" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Logger>
 
         <!-- Root Logger -->
         <Root level="all">
