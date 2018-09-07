@@ -52,10 +52,8 @@ public class MongoDbWork {
        }
    }
 
-//   public <T> T getFieldInDoc(Document document, String fieldName){
-//       return (T) document.get(fieldName) ;
 
-//   }
+
 //обновляет существующй документ путем добавления продолжительности в виде секунд
    public void updateDate(int userId,String nameArray,long dateToLong){
      Document found = collection.find(new Document("userId",userId)).first();
@@ -70,7 +68,7 @@ public class MongoDbWork {
       return database.getCollection("user").find(new Document("userId",userId)).first();
    }
 
-
+// показывает отработаное время
    public long queryWorkingHourse(Document document,String date){
      ArrayList<Long> arrayDate = (ArrayList<Long>)document.get(date);
      long sum = 0;

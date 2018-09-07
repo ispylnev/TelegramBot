@@ -1,10 +1,11 @@
 package Controls;
+import static Controls.Constants.*;
 import static java.lang.Math.toIntExact;
 import Utils.FileUtils;
 import Utils.MyDate;
 import database.MongoDbWork;
-import org.apache.commons.lang3.ObjectUtils;
 import org.bson.Document;
+import org.telegram.telegrambots.api.methods.send.SendDocument;
 import org.telegram.telegrambots.api.methods.send.SendMessage;
 import org.telegram.telegrambots.api.methods.updatingmessages.EditMessageText;
 import org.telegram.telegrambots.api.objects.Message;
@@ -22,7 +23,7 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 
-public class Bot extends TelegramLongPollingBot  {
+public class Bot extends TelegramLongPollingBot implements Button {
     private Properties properties = new Properties();
     protected Bot(DefaultBotOptions options) {
         super(options);
@@ -37,8 +38,6 @@ public class Bot extends TelegramLongPollingBot  {
     private Long duration;
     private String botName = FileUtils.getBotName(properties);
     private String token = FileUtils.getToken(properties);
-
-
 
     public Bot() {
     }
@@ -58,17 +57,17 @@ public class Bot extends TelegramLongPollingBot  {
         }
     }
 
+
     @Override
     public void onUpdateReceived(Update update) {
-
+        Message mes = update.getMessage();
         if (update.hasMessage() && update.getMessage().hasText()) {
-            Message mes = update.getMessage();
             userName = mes.getChat().getUserName();
             firstName = mes.getChat().getFirstName();
             chatId = mes.getChatId();
             userId = mes.getChat().getId();
             switch (mes.getText()) {
-                case "НАЧАТЬ":
+                case START:
                     boolean check = Boolean.valueOf((String) mongoDbWork.findFieldInDoc("userId", userId).get("check"));
                     if (check) {
                         MyDate.setBeginTime(MyDate.getTimeNow());
@@ -80,7 +79,7 @@ public class Bot extends TelegramLongPollingBot  {
                     } else sendMsg(mes, "необходимо закончить начатое");
                     break;
 
-                case "ЗАКОНЧИТЬ":
+                case STOP:
                     check = Boolean.valueOf((String) mongoDbWork.findFieldInDoc("userId", userId).get("check"));
                     if (!check) {
                         MyDate.setEndtime(MyDate.getTimeNow());
@@ -89,12 +88,12 @@ public class Bot extends TelegramLongPollingBot  {
 //                    sendMsg(mes,"Отработано за сегодня :" + "\n" + MyDate.SetwWorkingHours());
                         duration = MyDate.getDuration();
                         //обнавляем даты в массиве
-                         mongoDbWork.updateDate(toIntExact(userId), beginTime.substring(0, 10), MyDate.SetwWorkingHours());
+                        mongoDbWork.updateDate(toIntExact(userId), beginTime.substring(0, 10), MyDate.SetwWorkingHours());
                         mongoDbWork.updateDocument(toIntExact(userId), "true");
                     } else sendMsg(mes, "сначала начните");
                     break;
 
-                case "/start":
+                case INITIALIZATION:
 
                     mongoDbWork.addUser(userName, firstName, toIntExact(userId));
                     sendMsg(mes, firstName + ", " + "Инициализция успешна" + "\n" + "Можно работать");
@@ -102,26 +101,41 @@ public class Bot extends TelegramLongPollingBot  {
                     setIlnineKeyboard(sendMessage);
                     break;
 
+                case PORPFOLIO:
+                    //todo Вынести в отдельный метод
+                    SendDocument sendDocument = new SendDocument().setChatId(chatId).setDocument(FILEID)
+                            .setCaption("Резюме");
+                    try{
+                        sendDocument(sendDocument);
+
+                    }catch (TelegramApiException e){
+                        e.printStackTrace();
+                    }
+
+
                 default:
+                    // по дефолту отрабатывает паттерн показа времени
                     String date = mes.getText();
-                    Document queryDoc = mongoDbWork.queryDoc(toIntExact(userId));
-                    Long sumSeconds = mongoDbWork.queryWorkingHourse(queryDoc, date);
-                    long convertToSec = TimeUnit.MILLISECONDS.toSeconds(sumSeconds);
-                    LocalTime sumwork = LocalTime.ofSecondOfDay(convertToSec);
+                    if (date.matches("\\d+[-]?+\\d+[-]?+\\d+[-]?")) {
+                        Document queryDoc = mongoDbWork.queryDoc(toIntExact(userId));
+                        Long sumSeconds = mongoDbWork.queryWorkingHourse(queryDoc, date);
+                        long convertToSec = TimeUnit.MILLISECONDS.toSeconds(sumSeconds);
+                        LocalTime sumwork = LocalTime.ofSecondOfDay(convertToSec);
 //                   String parseSeconds =  String.format("%dчасов %dминут %dсекунд%n",
 //                   TimeUnit.MILLISECONDS.toHours(sumSeconds),
 //                   TimeUnit.MILLISECONDS.toMinutes(sumSeconds),
 //                   TimeUnit.MILLISECONDS.toSeconds(sumSeconds));
-                    sendMsg(mes, String.valueOf(sumwork));
+                        sendMsg(mes, String.valueOf(sumwork));
+                    }
 
             }
-
+//Если пользователь
         } else if (update.hasCallbackQuery()) {
+            //todo Вынести в отдельный метод
             String callData = update.getCallbackQuery().getData();
-
             long mesId = update.getCallbackQuery().getMessage().getMessageId();
             long chatId = update.getCallbackQuery().getMessage().getChatId();
-            if (callData.equals("test")) {
+            if (callData.equals("Да")) {
                 EditMessageText messageText = new EditMessageText()
                         .setChatId(chatId)
                         .setMessageId(toIntExact(mesId))
@@ -129,12 +143,19 @@ public class Bot extends TelegramLongPollingBot  {
                                 "Для того чтобы закончить нажмите кнопку Закночить" + "\n" +
                                 "Для вывода суммарно отработаного времени введите в чат дату в формате yyyy-MM-dd");
                 try {
-                    editMessageText(messageText);
+                    execute(messageText);
                 } catch (TelegramApiException e) {
+
                     e.printStackTrace();
                 }
 
             }
+        } else if (update.hasMessage() && update.getMessage().hasDocument() && update.getMessage()
+                .getChat().getUserName().equals("ispylnev")) {
+            long chatId = update.getMessage().getChatId();
+            org.telegram.telegrambots.api.objects.Document teleDoc = update.getMessage().getDocument();
+            String docId = teleDoc.getFileId();
+            sendMsg(mes, "feli id " + docId);
         }
     }
 
@@ -166,6 +187,7 @@ public class Bot extends TelegramLongPollingBot  {
         keyboardFirstRow.add(new KeyboardButton("НАЧАТЬ"));
         keyboardFirstRow.add(new KeyboardButton("ЗАКОНЧИТЬ"));
         keyboardRowsList.add(keyboardFirstRow);
+
 //        Устанавливаем список клавиатуре
         replyKeyboardMarkup.setKeyboard(keyboardRowsList);
 
@@ -177,7 +199,7 @@ public class Bot extends TelegramLongPollingBot  {
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> inlineKeyboardButtonList = new ArrayList<>();
         List<InlineKeyboardButton> keyboardRow = new ArrayList<>();
-        keyboardRow.add(new InlineKeyboardButton().setText("Да").setCallbackData("test"));
+        keyboardRow.add(new InlineKeyboardButton().setText("Да").setCallbackData("Да"));
         inlineKeyboardButtonList.add(keyboardRow);
         inlineKeyboardMarkup.setKeyboard(inlineKeyboardButtonList);
         sendMessage.setReplyMarkup(inlineKeyboardMarkup);
@@ -189,5 +211,6 @@ public class Bot extends TelegramLongPollingBot  {
         return sendMessage;
 
     }
+
 
 }
