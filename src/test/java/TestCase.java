@@ -4,14 +4,11 @@ import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import org.junit.Before;
 import org.junit.Test;
-import java.time.Duration;
-import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
 
 public class TestCase {
     private MongoDatabase database;
     private MongoCollection<Document> mongoCollection;
-   private long sum = 0;
+    private long sum = 0;
 
 
 
@@ -31,6 +28,7 @@ public class TestCase {
                 .append("userId", "userId")
                 .append("data", new Document("data", "data"));
         mongoCollection.insertOne(document);
+        mongoCollection.deleteOne(document);
 
     }
 

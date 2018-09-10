@@ -4,17 +4,14 @@ import static java.lang.Math.toIntExact;
 import Utils.FileUtils;
 import Utils.MyDate;
 import database.MongoDbWork;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.bson.Document;
 import org.telegram.telegrambots.api.methods.send.SendDocument;
 import org.telegram.telegrambots.api.methods.send.SendMessage;
 import org.telegram.telegrambots.api.methods.updatingmessages.EditMessageText;
 import org.telegram.telegrambots.api.objects.Message;
 import org.telegram.telegrambots.api.objects.Update;
-import org.telegram.telegrambots.api.objects.replykeyboard.InlineKeyboardMarkup;
-import org.telegram.telegrambots.api.objects.replykeyboard.ReplyKeyboardMarkup;
-import org.telegram.telegrambots.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-import org.telegram.telegrambots.api.objects.replykeyboard.buttons.KeyboardButton;
-import org.telegram.telegrambots.api.objects.replykeyboard.buttons.KeyboardRow;
 import org.telegram.telegrambots.bots.DefaultBotOptions;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.exceptions.TelegramApiException;
@@ -23,7 +20,8 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 
-public class Bot extends TelegramLongPollingBot implements Button {
+public class Bot extends TelegramLongPollingBot implements Ibutton {
+    private Logger logger = LogManager.getLogger(Bot.class);
     private Properties properties = new Properties();
     protected Bot(DefaultBotOptions options) {
         super(options);
@@ -52,8 +50,9 @@ public class Bot extends TelegramLongPollingBot implements Button {
         try{
             setButtons(sendMessage);
             execute(sendMessage);
+            logger.info("Кнопки Установлены");
         }catch (TelegramApiException e){
-            e.printStackTrace();
+            logger.error("Ошибка установки кнопок" + e.getMessage());
         }
     }
 
@@ -97,19 +96,29 @@ public class Bot extends TelegramLongPollingBot implements Button {
 
                     mongoDbWork.addUser(userName, firstName, toIntExact(userId));
                     sendMsg(mes, firstName + ", " + "Инициализция успешна" + "\n" + "Можно работать");
+
+                    //Установим Инлайн клавиатуру
                     SendMessage sendMessage = new SendMessage();
-                    setIlnineKeyboard(sendMessage);
+                    try {
+                        setIlnineKeyboard(chatId,sendMessage);
+                        execute(sendMessage);
+                        logger.info("Инлайн клавиатура установлена");
+                    } catch (TelegramApiException e) {
+                        logger.error("Ошибка установки клавиатуры"+e.getMessage());
+                    }
+
                     break;
 
                 case PORPFOLIO:
-                    //todo Вынести в отдельный метод
+
                     SendDocument sendDocument = new SendDocument().setChatId(chatId).setDocument(FILEID)
                             .setCaption("Резюме");
                     try{
                         sendDocument(sendDocument);
+                        logger.info("Документ отправлен пользователю");
 
                     }catch (TelegramApiException e){
-                        e.printStackTrace();
+                       logger.error("Ошибка отправки документа"+ e.getMessage());
                     }
 
 
@@ -129,7 +138,7 @@ public class Bot extends TelegramLongPollingBot implements Button {
                     }
 
             }
-//Если пользователь
+//Если пользователь нажал инлайн кнопку возвращается Callback
         } else if (update.hasCallbackQuery()) {
             //todo Вынести в отдельный метод
             String callData = update.getCallbackQuery().getData();
@@ -150,9 +159,9 @@ public class Bot extends TelegramLongPollingBot implements Button {
                 }
 
             }
+            //отправим документ на сервер
         } else if (update.hasMessage() && update.getMessage().hasDocument() && update.getMessage()
                 .getChat().getUserName().equals("ispylnev")) {
-            long chatId = update.getMessage().getChatId();
             org.telegram.telegrambots.api.objects.Document teleDoc = update.getMessage().getDocument();
             String docId = teleDoc.getFileId();
             sendMsg(mes, "feli id " + docId);
@@ -171,46 +180,8 @@ public class Bot extends TelegramLongPollingBot implements Button {
         return token;
     }
 
-    public void setButtons(SendMessage sendMessage){
-        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
-        sendMessage.setReplyMarkup(replyKeyboardMarkup);
-//        видимость сообщения
-        replyKeyboardMarkup.setSelective(true);
-//        подгонка клавиатуры под клиента
-        replyKeyboardMarkup.setResizeKeyboard(true);
-//       скртие кнопки после ввода
-        replyKeyboardMarkup.setOneTimeKeyboard(false);
-//        создаем кнопки
-        List<KeyboardRow> keyboardRowsList= new ArrayList<>();
 
-        KeyboardRow keyboardFirstRow = new KeyboardRow();
-        keyboardFirstRow.add(new KeyboardButton("НАЧАТЬ"));
-        keyboardFirstRow.add(new KeyboardButton("ЗАКОНЧИТЬ"));
-        keyboardRowsList.add(keyboardFirstRow);
 
-//        Устанавливаем список клавиатуре
-        replyKeyboardMarkup.setKeyboard(keyboardRowsList);
-
-    }
-
-    public SendMessage setIlnineKeyboard(SendMessage sendMessage){
-        sendMessage.setChatId(chatId);
-        sendMessage.setText("Прочтете краткую инструкцию?");
-        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-        List<List<InlineKeyboardButton>> inlineKeyboardButtonList = new ArrayList<>();
-        List<InlineKeyboardButton> keyboardRow = new ArrayList<>();
-        keyboardRow.add(new InlineKeyboardButton().setText("Да").setCallbackData("Да"));
-        inlineKeyboardButtonList.add(keyboardRow);
-        inlineKeyboardMarkup.setKeyboard(inlineKeyboardButtonList);
-        sendMessage.setReplyMarkup(inlineKeyboardMarkup);
-        try{
-          execute(sendMessage);
-        }catch (TelegramApiException e){
-            e.printStackTrace();
-        }
-        return sendMessage;
-
-    }
 
 
 }
