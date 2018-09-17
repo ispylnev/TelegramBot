@@ -58,7 +58,7 @@ public class FileUtils {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return  (String)properties.get(PROXYPUSER);
+        return (String)properties.get(PROXYPUSER);
 
     }
 

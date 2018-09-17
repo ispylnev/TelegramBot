@@ -12,13 +12,13 @@ import java.util.List;
 
 public  interface Ibutton {
     //Creat inlineKeybord
-    default SendMessage setIlnineKeyboard(long chatId, SendMessage sendMessage) throws TelegramApiException {
+    default SendMessage setIlnineKeyboard(long chatId, String stringHelp,String nameCalKey, SendMessage sendMessage) throws TelegramApiException {
         sendMessage.setChatId(chatId);
-        sendMessage.setText("Прочтете краткую инструкцию?");
+        sendMessage.setText(stringHelp);
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> inlineKeyboardButtonList = new ArrayList<>();
         List<InlineKeyboardButton> keyboardRow = new ArrayList<>();
-        keyboardRow.add(new InlineKeyboardButton().setText("Да").setCallbackData("Да"));
+        keyboardRow.add(new InlineKeyboardButton().setText(nameCalKey).setCallbackData(nameCalKey));
         inlineKeyboardButtonList.add(keyboardRow);
         inlineKeyboardMarkup.setKeyboard(inlineKeyboardButtonList);
         sendMessage.setReplyMarkup(inlineKeyboardMarkup);

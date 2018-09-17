@@ -1,6 +1,8 @@
 package Controls;
 import static Controls.Constants.*;
 import static java.lang.Math.toIntExact;
+
+import Utils.BotTimer;
 import Utils.FileUtils;
 import Utils.MyDate;
 import database.MongoDbWork;
@@ -71,6 +73,11 @@ public class Bot extends TelegramLongPollingBot implements Ibutton {
                     if (check) {
                         MyDate.setBeginTime(MyDate.getTimeNow());
                         beginTime = MyDate.getBeginTime();
+                        BotTimer botTimer = new BotTimer();
+                        Timer timer = new Timer(true);
+                        timer.schedule(botTimer,new Date(System.currentTimeMillis()+5000));
+
+
                         sendMsg(mes, "Начало работы :" + "\n" + beginTime.substring(0, 19));
                         mongoDbWork.updateDocument(toIntExact(userId), "false");
 
@@ -100,7 +107,7 @@ public class Bot extends TelegramLongPollingBot implements Ibutton {
                     //Установим Инлайн клавиатуру
                     SendMessage sendMessage = new SendMessage();
                     try {
-                        setIlnineKeyboard(chatId,sendMessage);
+                        setIlnineKeyboard(chatId,"Прочтете краткую инструкцию?","Да",sendMessage);
                         execute(sendMessage);
                         logger.info("Инлайн клавиатура установлена");
                     } catch (TelegramApiException e) {
@@ -127,7 +134,7 @@ public class Bot extends TelegramLongPollingBot implements Ibutton {
                     String date = mes.getText();
                     if (date.matches("\\d+[-]?+\\d+[-]?+\\d+[-]?")) {
                         Document queryDoc = mongoDbWork.queryDoc(toIntExact(userId));
-                        Long sumSeconds = mongoDbWork.queryWorkingHourse(queryDoc, date);
+                        long sumSeconds = mongoDbWork.queryWorkingHourse(queryDoc, date);
                         long convertToSec = TimeUnit.MILLISECONDS.toSeconds(sumSeconds);
                         LocalTime sumwork = LocalTime.ofSecondOfDay(convertToSec);
 //                   String parseSeconds =  String.format("%dчасов %dминут %dсекунд%n",

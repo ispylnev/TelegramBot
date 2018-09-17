@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 
 
+
 public class MongoDbWork {
     private Logger databaseLogger = LogManager.getLogger(MongoDbWork.class);
     private MongoClient connection;
@@ -71,9 +72,10 @@ public class MongoDbWork {
 // показывает отработаное время
    public long queryWorkingHourse(Document document,String date){
      ArrayList<Long> arrayDate = (ArrayList<Long>)document.get(date);
+       System.out.println(arrayDate);
      long sum = 0;
      for(int i = 0;i < arrayDate.size();i++){
-         sum = sum + arrayDate.get(i);
+         sum = sum + Long.parseLong(String.valueOf(arrayDate.get(i)));
      }
      return sum;
    }
@@ -85,3 +87,4 @@ public class MongoDbWork {
        collection.updateOne(found,document);
    }
 }
+
