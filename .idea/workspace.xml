@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a48b808f-5503-480d-97eb-c0442c165204" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Utils/Aes256.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Utils/Tets.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestCaseAes256.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/heroku" beforeDir="false" afterPath="$PROJECT_DIR$/heroku" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/properties.dat" beforeDir="false" afterPath="$PROJECT_DIR$/properties.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controls/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controls/Bot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/FileUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/Aes256.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/Aes256.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/Tets.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,57 +27,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Bot.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Bot.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Controls/Bot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="190" selection-start-line="190" selection-end-line="190" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultAbsSender.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/telegram/telegrambots/3.6.1/telegrambots-3.6.1.jar!/org/telegram/telegrambots/bots/DefaultAbsSender.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="760" selection-start-line="760" selection-end-line="760" />
-              <folding>
-                <element signature="e#38926#38927#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tets.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Tets.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/FileUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+              <caret line="100" column="57" selection-start-line="100" selection-start-column="47" selection-end-line="100" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#350#351#0" expanded="true" />
-                <element signature="e#373#374#0" expanded="true" />
+                <element signature="e#8241#8242#0" expanded="true" />
+                <element signature="e#8288#8289#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Procfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Procfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestCaseAes256.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TestCaseAes256.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#375#376#0" expanded="true" />
+                <element signature="e#460#461#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,32 +67,10 @@
       <file leaf-file-name="ServerProperties.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Controls/ServerProperties.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+            <state relative-caret-position="17">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Aes256.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Aes256.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="19" column="40" lean-forward="true" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#365#366#0" expanded="true" />
-                <element signature="e#405#406#0" expanded="true" />
-                <element signature="e#379#380#0" expanded="true" />
-                <element signature="e#426#427#0" expanded="true" />
-                <element signature="e#464#465#0" expanded="true" />
-                <element signature="e#500#501#0" expanded="true" />
-                <element signature="e#3253#3254#0" expanded="true" />
-                <element signature="e#3327#3328#0" expanded="true" />
-                <element signature="e#3378#3379#0" expanded="true" />
-                <element signature="e#3449#3450#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,17 +79,29 @@
       <file leaf-file-name="properties.dat" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/properties.dat">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="72" />
+            <state>
+              <caret selection-end-line="5" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="heroku" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Aes256.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Aes256.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="heroku" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/heroku">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="72" />
+            <state relative-caret-position="136">
+              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -196,12 +166,13 @@
         <option value="$PROJECT_DIR$/src/main/java/Controls/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/FileUtils.java" />
         <option value="$PROJECT_DIR$/Procfile" />
-        <option value="$PROJECT_DIR$/heroku" />
-        <option value="$PROJECT_DIR$/src/main/java/Controls/ServerProperties.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Controls/Bot.java" />
-        <option value="$PROJECT_DIR$/properties.dat" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/Tets.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/Aes256.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Controls/Bot.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestCaseAes256.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Controls/ServerProperties.java" />
+        <option value="$PROJECT_DIR$/properties.dat" />
+        <option value="$PROJECT_DIR$/heroku" />
       </list>
     </option>
   </component>
@@ -363,7 +334,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.TestCaseAes256">
     <configuration name="Aes256" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="secretKey" value="Bar12345Bar12345" />
@@ -405,19 +376,59 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="TetsTime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Utils.TetsTime" />
-      <module name="TelegramBot" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="TestCaseAes256" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TelegramBot" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestCaseAes256" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="--add-modules=java.se.ee" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TestCaseAes256.Aes256" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TelegramBot" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestCaseAes256" />
+      <option name="METHOD_NAME" value="Aes256" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TestCaseAes256.testEncrypt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TelegramBot" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestCaseAes256" />
+      <option name="METHOD_NAME" value="testEncrypt" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="--add-modules=java.se.ee " />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="TestCase.startMongo" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="TelegramBot" />
@@ -477,15 +488,19 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.TestCase.startMongo" />
-      <item itemvalue="Application.TetsTime" />
       <item itemvalue="Application.Aes256" />
       <item itemvalue="Application.Tets" />
+      <item itemvalue="JUnit.TestCaseAes256.Aes256" />
+      <item itemvalue="JUnit.TestCaseAes256.testEncrypt" />
+      <item itemvalue="JUnit.TestCaseAes256" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestCaseAes256" />
+        <item itemvalue="JUnit.TestCaseAes256.testEncrypt" />
+        <item itemvalue="JUnit.TestCaseAes256.Aes256" />
         <item itemvalue="Application.Tets" />
         <item itemvalue="Application.Aes256" />
-        <item itemvalue="Application.TetsTime" />
       </list>
     </recent_temporary>
   </component>
@@ -499,13 +514,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1531762660175</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Исправил gitignore">
-      <created>1533146661959</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1533146661959</updated>
     </task>
     <task id="LOCAL-00018" summary="Исправил gitignore">
       <created>1533146777504</created>
@@ -843,39 +851,46 @@
       <option name="project" value="LOCAL" />
       <updated>1537199091688</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Добавлено шифрование AES">
+      <created>1537347049122</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1537347049124</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestCase_sumDuration - 2018.08.22 at 20h 17m 25s.xml">
-      <configuration name="TestCase.sumDuration" configurationId="JUnit" />
+    <history-entry file="TestCaseAes256 - 2018.09.19 at 20h 58m 39s.xml">
+      <configuration name="TestCaseAes256" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCase_sumDuration - 2018.08.22 at 21h 27m 58s.xml">
-      <configuration name="TestCase.sumDuration" configurationId="JUnit" />
+    <history-entry file="TestCaseAes256 - 2018.09.19 at 20h 59m 21s.xml">
+      <configuration name="TestCaseAes256" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCase_sumDuration - 2018.08.22 at 23h 45m 22s.xml">
-      <configuration name="TestCase.sumDuration" configurationId="JUnit" />
+    <history-entry file="TestCaseAes256 - 2018.09.19 at 21h 00m 20s.xml">
+      <configuration name="TestCaseAes256" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCase_findAndReplaceArray - 2018.08.22 at 23h 45m 47s.xml">
-      <configuration name="TestCase.findAndReplaceArray" configurationId="JUnit" />
+    <history-entry file="TestCaseAes256 - 2018.09.19 at 21h 00m 50s.xml">
+      <configuration name="TestCaseAes256" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCase_findAndReplaceArray - 2018.08.23 at 08h 52m 07s.xml">
-      <configuration name="TestCase.findAndReplaceArray" configurationId="JUnit" />
+    <history-entry file="TestCaseAes256 - 2018.09.19 at 21h 04m 43s.xml">
+      <configuration name="TestCaseAes256" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCase_findAndReplaceArray - 2018.08.23 at 12h 39m 22s.xml">
-      <configuration name="TestCase.findAndReplaceArray" configurationId="JUnit" />
+    <history-entry file="TestCaseAes256 - 2018.09.19 at 21h 06m 04s.xml">
+      <configuration name="TestCaseAes256" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCase_startMongo - 2018.09.10 at 21h 11m 24s.xml">
-      <configuration name="TestCase.startMongo" configurationId="JUnit" />
+    <history-entry file="TestCaseAes256 - 2018.09.19 at 21h 08m 34s.xml">
+      <configuration name="TestCaseAes256" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCase_startMongo - 2018.09.10 at 21h 12m 13s.xml">
-      <configuration name="TestCase.startMongo" configurationId="JUnit" />
+    <history-entry file="TestCaseAes256 - 2018.09.19 at 21h 09m 23s.xml">
+      <configuration name="TestCaseAes256" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCase_findAndReplaceArray - 2018.09.10 at 21h 12m 28s.xml">
-      <configuration name="TestCase.findAndReplaceArray" configurationId="JUnit" />
+    <history-entry file="TestCaseAes256 - 2018.09.19 at 21h 09m 50s.xml">
+      <configuration name="TestCaseAes256" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCase_findAndReplaceArray - 2018.09.10 at 21h 27m 16s.xml">
-      <configuration name="TestCase.findAndReplaceArray" configurationId="JUnit" />
+    <history-entry file="TestCaseAes256 - 2018.09.19 at 21h 10m 05s.xml">
+      <configuration name="TestCaseAes256" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -889,6 +904,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3291592" />
@@ -899,13 +915,13 @@
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.13765182" side_tool="true" weight="0.31127012" />
       <window_info anchor="right" id="Maven Projects" order="2" weight="0.09878542" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.41323793" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8623482" weight="0.47584972" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.68906885" visible="true" weight="0.37567085" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8623482" visible="true" weight="0.17710197" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.68906885" weight="0.15026833" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.81666666" visible="true" weight="0.20080972" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.81666666" visible="true" weight="0.20080972" />
       <window_info id="Structure" order="1" sideWeight="0.502439" side_tool="true" weight="0.22024292" />
-      <window_info anchor="right" id="Ant Build" order="3" visible="true" weight="0.021862349" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.021862349" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="6" sideWeight="0.18333334" side_tool="true" weight="0.3657534" />
@@ -949,7 +965,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Добавил методы управляющие временем. РЕЛИЗ 1" />
     <MESSAGE value="редакция POM" />
     <MESSAGE value="Revert &quot;Для теста&quot;&#10;&#10;This reverts commit 5f24b793d9ebc46f43c81a24c3a94b8d0bc4c560.&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/Utils/MyDate.java" />
     <MESSAGE value="исправил ошибку заливки на сервер" />
@@ -974,7 +989,8 @@
     <MESSAGE value="Много изменений . Начал проводить рефактор." />
     <MESSAGE value="Добавил интерфейс . Отправил туда методы кнопок" />
     <MESSAGE value="Исправил ошибку вывода времени" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправил ошибку вывода времени" />
+    <MESSAGE value="Добавлено шифрование AES" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлено шифрование AES" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -986,14 +1002,6 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/Utils/Aes256.java</url>
-          <line>22</line>
-          <properties class="Utils.Aes256" method="&lt;init&gt;">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="107" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/database/MongoDbWork.java</url>
@@ -1021,24 +1029,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Controls/Bot.java</url>
-          <line>190</line>
+          <line>189</line>
           <properties />
           <option name="timeStamp" value="109" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Utils/Aes256.java</url>
-          <line>41</line>
+          <line>45</line>
           <properties />
           <option name="timeStamp" value="110" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Utils/Tets.java</url>
-          <line>17</line>
-          <properties />
-          <option name="timeStamp" value="111" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="112" />
+      <option name="time" value="116" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1095,20 +1097,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/concurrent/TimeUnit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="265" column="16" selection-start-line="265" selection-start-column="16" selection-end-line="265" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Controls/Bot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1089">
@@ -1289,13 +1277,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestCase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/lang/ClassLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
@@ -1375,44 +1356,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controls/ServerProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/heroku">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/telegram/telegrambots/3.6.1/telegrambots-3.6.1.jar!/org/telegram/telegrambots/bots/DefaultAbsSender.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="760" selection-start-line="760" selection-end-line="760" />
-          <folding>
-            <element signature="e#38926#38927#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1423,20 +1370,6 @@
           <folding>
             <marker date="1535737176709" expanded="true" signature="804:973" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/properties.dat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Tets.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
@@ -1452,33 +1385,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Aes256.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/telegram/telegrambots/3.6.1/telegrambots-3.6.1.jar!/org/telegram/telegrambots/bots/DefaultAbsSender.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="19" column="40" lean-forward="true" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        <state relative-caret-position="193">
+          <caret line="760" selection-start-line="760" selection-end-line="760" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-            <element signature="e#405#406#0" expanded="true" />
-            <element signature="e#379#380#0" expanded="true" />
-            <element signature="e#426#427#0" expanded="true" />
-            <element signature="e#464#465#0" expanded="true" />
-            <element signature="e#500#501#0" expanded="true" />
-            <element signature="e#3253#3254#0" expanded="true" />
-            <element signature="e#3327#3328#0" expanded="true" />
-            <element signature="e#3378#3379#0" expanded="true" />
-            <element signature="e#3449#3450#0" expanded="true" />
+            <element signature="e#38926#38927#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/security/SecureRandom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="696" column="16" selection-start-line="696" selection-start-column="16" selection-end-line="696" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Tets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Controls/Bot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="190" selection-start-line="190" selection-end-line="190" />
+        <state relative-caret-position="136">
+          <caret line="100" column="57" selection-start-line="100" selection-start-column="47" selection-end-line="100" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8241#8242#0" expanded="true" />
+            <element signature="e#8288#8289#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Aes256.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestCaseAes256.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#375#376#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controls/ServerProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/properties.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/heroku">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1499,7 +1498,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1547,7 +1546,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>org.mongodb: mongo-java-driver</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

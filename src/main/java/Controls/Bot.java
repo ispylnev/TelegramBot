@@ -183,11 +183,10 @@ public class Bot extends TelegramLongPollingBot implements Ibutton {
 
     public String getBotUsername() {
 
-        return botName;
+        return fileUtils.decrypt(botName);
     }
 
     public String getBotToken() {
-        System.out.println(fileUtils.decrypt(token));
         return fileUtils.decrypt(token);
     }
 

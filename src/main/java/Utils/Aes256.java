@@ -8,6 +8,10 @@ import java.security.SecureRandom;
 import javax.crypto.*;
 import javax.xml.bind.DatatypeConverter;
 
+/*
+Класс для шифровки и дешифровки входящий и изходящих данных
+
+ */
 public class Aes256 {
 
    private byte[] seed;
@@ -53,10 +57,13 @@ public class Aes256 {
         return null;
     }
 
+    /*
+    Этот метод генерирует дополнительное шифрование секретного ключа
+     */
     private static byte[] getRawKey(byte[] password) throws NoSuchAlgorithmException {
         KeyGenerator kgen = KeyGenerator.getInstance("AES");
         SecureRandom sr = SecureRandom.getInstance("SHA1PRNG");
-        sr.setSeed(password);
+        sr.setSeed( password);
         kgen.init(128, sr); // 192 and 256 bits may not be available
         SecretKey skey = kgen.generateKey();
         byte[] raw = skey.getEncoded();
