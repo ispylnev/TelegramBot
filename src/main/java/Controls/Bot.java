@@ -23,6 +23,7 @@ import java.util.concurrent.TimeUnit;
 
 
 public class Bot extends TelegramLongPollingBot implements Ibutton {
+
     private Logger logger = LogManager.getLogger(Bot.class);
     private Properties properties = new Properties();
     protected Bot(DefaultBotOptions options) {
@@ -36,7 +37,10 @@ public class Bot extends TelegramLongPollingBot implements Ibutton {
     private String beginTime;
     private String endTime;
     private Long duration;
+    private FileUtils fileUtils = new FileUtils();
+//    private String botName = fileUtils.decrypt(FileUtils.getBotName(properties));
     private String botName = FileUtils.getBotName(properties);
+//    private String token = fileUtils.decrypt(FileUtils.getToken(properties));
     private String token = FileUtils.getToken(properties);
 
     public Bot() {
@@ -183,8 +187,8 @@ public class Bot extends TelegramLongPollingBot implements Ibutton {
     }
 
     public String getBotToken() {
-
-        return token;
+        System.out.println(fileUtils.decrypt(token));
+        return fileUtils.decrypt(token);
     }
 
 

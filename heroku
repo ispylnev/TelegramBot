@@ -1,2 +1,5 @@
 git push heroku master
 heroku ps:scale worker=1
+
+bot = 4brUId85U9T7mKOB5t3eLQ==
+token = CxN9+vPDLE2NvdWWl013qjBOjJkcY0fiYUUhCe5Wnwo2KT2YI+91iP+oQYg/40l6

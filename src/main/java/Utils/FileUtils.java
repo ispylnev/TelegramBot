@@ -4,12 +4,17 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
-
 import static Controls.Constants.*;
 
-public class FileUtils {
-//todo разобраться с закрытием файла
+public  class FileUtils extends Aes256 {
+
     private static FileInputStream fileInputStream = null;
+
+    public FileUtils() {
+        super();
+    }
+
+
 
     public static FileInputStream openFile(String file) {
         try {
@@ -30,12 +35,15 @@ public class FileUtils {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        try {
-            fileInputStream.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+        finally {
+            try {
+                fileInputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-        return (String)properties.get(PROXY);
+
+        return  (String)properties.get(PROXY);
 
 
     }
