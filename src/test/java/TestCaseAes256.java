@@ -8,7 +8,7 @@ public class TestCaseAes256 {
 
     @Test
     public void  testEncrypt (){
-       String encrypt = aes256.encrypt("C9b3DbO");
+       String encrypt = aes256.encrypt(2);
         Assert.assertEquals( "B+vHJG+63vPVlA6c7ZukkA==",encrypt);
     }
 

@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a48b808f-5503-480d-97eb-c0442c165204" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestCaseAes256.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/heroku" beforeDir="false" afterPath="$PROJECT_DIR$/heroku" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/properties.dat" beforeDir="false" afterPath="$PROJECT_DIR$/properties.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controls/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controls/Bot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Utils/Aes256.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/Aes256.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/Tets.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/MongoDbWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/MongoDbWork.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,11 +27,10 @@
       <file leaf-file-name="Bot.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Controls/Bot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="100" column="57" selection-start-line="100" selection-start-column="47" selection-end-line="100" selection-end-column="57" />
+            <state relative-caret-position="89">
+              <caret line="189" selection-start-line="189" selection-end-line="189" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#8241#8242#0" expanded="true" />
                 <element signature="e#8288#8289#0" expanded="true" />
               </folding>
             </state>
@@ -64,11 +60,32 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="MongoDbWork.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/database/MongoDbWork.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ServerProperties.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Controls/ServerProperties.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="163">
+              <caret line="44" selection-start-line="44" selection-end-line="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,17 +96,17 @@
       <file leaf-file-name="properties.dat" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/properties.dat">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="5" selection-end-column="23" />
+            <state relative-caret-position="34">
+              <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Aes256.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Aes256.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Aes256.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="292">
+              <caret line="35" column="33" lean-forward="true" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,7 +114,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="heroku" pinned="false" current-in-tab="true">
+      <file leaf-file-name="heroku" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/heroku">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -162,17 +179,17 @@
         <option value="$PROJECT_DIR$/src/main/java/Controls/Ibutton.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/TetsTime.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/BotTimer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/database/MongoDbWork.java" />
         <option value="$PROJECT_DIR$/src/main/java/Controls/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/FileUtils.java" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/Tets.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Utils/Aes256.java" />
         <option value="$PROJECT_DIR$/src/main/java/Controls/Bot.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestCaseAes256.java" />
         <option value="$PROJECT_DIR$/src/main/java/Controls/ServerProperties.java" />
-        <option value="$PROJECT_DIR$/properties.dat" />
         <option value="$PROJECT_DIR$/heroku" />
+        <option value="$PROJECT_DIR$/properties.dat" />
+        <option value="$PROJECT_DIR$/src/main/java/database/MongoDbWork.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/Aes256.java" />
       </list>
     </option>
   </component>
@@ -334,7 +351,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestCaseAes256">
+  <component name="RunManager" selected="JUnit.TestCaseAes256.testEncrypt">
     <configuration name="Aes256" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="secretKey" value="Bar12345Bar12345" />
@@ -496,8 +513,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestCaseAes256" />
         <item itemvalue="JUnit.TestCaseAes256.testEncrypt" />
+        <item itemvalue="JUnit.TestCaseAes256" />
         <item itemvalue="JUnit.TestCaseAes256.Aes256" />
         <item itemvalue="Application.Tets" />
         <item itemvalue="Application.Aes256" />
@@ -514,13 +531,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1531762660175</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Исправил gitignore">
-      <created>1533146777504</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1533146777504</updated>
     </task>
     <task id="LOCAL-00019" summary="Исправил gitignore">
       <created>1533151560587</created>
@@ -858,13 +868,17 @@
       <option name="project" value="LOCAL" />
       <updated>1537347049124</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Добавил тесты">
+      <created>1537381037867</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1537381037867</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestCaseAes256 - 2018.09.19 at 20h 58m 39s.xml">
-      <configuration name="TestCaseAes256" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestCaseAes256 - 2018.09.19 at 20h 59m 21s.xml">
       <configuration name="TestCaseAes256" configurationId="JUnit" />
     </history-entry>
@@ -892,6 +906,9 @@
     <history-entry file="TestCaseAes256 - 2018.09.19 at 21h 10m 05s.xml">
       <configuration name="TestCaseAes256" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestCaseAes256 - 2018.09.19 at 22h 25m 43s.xml">
+      <configuration name="TestCaseAes256" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -915,17 +932,17 @@
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.13765182" side_tool="true" weight="0.31127012" />
       <window_info anchor="right" id="Maven Projects" order="2" weight="0.09878542" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.41323793" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8623482" visible="true" weight="0.17710197" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.68906885" weight="0.15026833" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8623482" weight="0.3846154" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.68906885" visible="true" weight="0.1431127" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.81666666" visible="true" weight="0.20080972" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.81666666" visible="true" weight="0.15789473" />
       <window_info id="Structure" order="1" sideWeight="0.502439" side_tool="true" weight="0.22024292" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.021862349" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="6" sideWeight="0.18333334" side_tool="true" weight="0.3657534" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8793522" weight="0.44186047" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8793522" weight="0.3881932" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32955465" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -965,7 +982,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="редакция POM" />
     <MESSAGE value="Revert &quot;Для теста&quot;&#10;&#10;This reverts commit 5f24b793d9ebc46f43c81a24c3a94b8d0bc4c560.&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/Utils/MyDate.java" />
     <MESSAGE value="исправил ошибку заливки на сервер" />
     <MESSAGE value="Исправление заливки на сервер попытка 1" />
@@ -990,7 +1006,8 @@
     <MESSAGE value="Добавил интерфейс . Отправил туда методы кнопок" />
     <MESSAGE value="Исправил ошибку вывода времени" />
     <MESSAGE value="Добавлено шифрование AES" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлено шифрование AES" />
+    <MESSAGE value="Добавил тесты" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил тесты" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1005,7 +1022,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/database/MongoDbWork.java</url>
-          <line>47</line>
+          <line>50</line>
           <properties />
           <option name="timeStamp" value="94" />
         </line-breakpoint>
@@ -1017,7 +1034,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/database/MongoDbWork.java</url>
-          <line>75</line>
+          <line>78</line>
           <properties />
           <option name="timeStamp" value="101" />
         </line-breakpoint>
@@ -1034,13 +1051,13 @@
           <option name="timeStamp" value="109" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Utils/Aes256.java</url>
-          <line>45</line>
+          <url>file://$PROJECT_DIR$/src/main/java/database/MongoDbWork.java</url>
+          <line>21</line>
           <properties />
-          <option name="timeStamp" value="110" />
+          <option name="timeStamp" value="121" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="116" />
+      <option name="time" value="122" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1050,37 +1067,37 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>fileUtils.decrypt(token)</expression-string>
+        <expression-string>connection.getCredentialsList()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>fileUtils.decrypt(FileUtils.getBotName(properties))</expression-string>
+        <expression-string>connection.getCredentialsList();</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>fileUtils.decrypt(FileUtils.getToken(properties))</expression-string>
+        <expression-string>connection.getOptions()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string />
+        <expression-string>connection.getAddress().host</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string />
+        <expression-string>connection.getAddress().getSocketAddress().getHostString()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string />
+        <expression-string>connection.getAddress().getSocketAddress().getHostString();</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string />
+        <expression-string>connection.getAddress().getSocketAddress();</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -1137,13 +1154,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/mongo-java-driver/3.2.2/mongo-java-driver-3.2.2.jar!/com/mongodb/client/MongoDatabase.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1322,16 +1332,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/database/MongoDbWork.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="732">
-          <caret line="80" column="4" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Controls/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1353,13 +1353,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-64">
           <caret line="95" column="22" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -1423,22 +1416,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controls/Bot.java">
+    <entry file="file://$PROJECT_DIR$/heroku">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="100" column="57" selection-start-line="100" selection-start-column="47" selection-end-line="100" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8241#8242#0" expanded="true" />
-            <element signature="e#8288#8289#0" expanded="true" />
-          </folding>
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Aes256.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="68">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/properties.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/mongo-java-driver/3.2.2/mongo-java-driver-3.2.2.jar!/com/mongodb/client/MongoDatabase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controls/ServerProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1457,27 +1466,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controls/ServerProperties.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controls/Bot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="89">
+          <caret line="189" selection-start-line="189" selection-end-line="189" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8288#8289#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/database/MongoDbWork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/properties.dat">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Aes256.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/heroku">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        <state relative-caret-position="292">
+          <caret line="35" column="33" lean-forward="true" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1498,7 +1514,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1546,7 +1562,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>org.mongodb: mongo-java-driver</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>

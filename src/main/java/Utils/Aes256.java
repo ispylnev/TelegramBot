@@ -28,11 +28,11 @@ public class Aes256 {
         this.seed = password;
     }
 
-    public String encrypt(String cleartext) {
+    public <T> String encrypt(T cleartext) {
         try {
             byte[] rawKey = getRawKey(seed);
             byte[] result = new byte[0];
-            result = encrypt(rawKey, cleartext.getBytes());
+            result = encrypt(rawKey,String.valueOf(cleartext).getBytes());
             return toHex(result);
         } catch (Exception e) {
             e.printStackTrace();
@@ -42,11 +42,11 @@ public class Aes256 {
         return null;
     }
 
-    public String decrypt(String encrypted) {
+    public <T> String decrypt(T encrypted) {
         byte[] rawKey = new byte[0];
         try {
             rawKey = getRawKey(seed);
-            byte[] enc = toByte(encrypted);
+            byte[] enc = toByte((String)encrypted);
             byte[] result = new byte[0];
             result = decrypt(rawKey, enc);
             return new String(result);
