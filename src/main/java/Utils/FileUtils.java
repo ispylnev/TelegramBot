@@ -90,15 +90,15 @@ public  class FileUtils extends Aes256 {
        return (String) properties.get(TOKEN);
     }
 
-    public static int geProxyPort(Properties properties) {
+    public static String geProxyPort(Properties properties) {
         openFile(PATHFILE);
         try {
             properties.load(fileInputStream);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        String port =  (String) properties.get(PORT);
-        return Integer.valueOf(port);
+        return (String) properties.get(PORT);
+
 
     }
 

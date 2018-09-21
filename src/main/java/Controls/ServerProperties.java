@@ -1,5 +1,6 @@
 package Controls;
 
+import Utils.Aes256;
 import Utils.FileUtils;
 import org.apache.http.HttpHost;
 import org.apache.http.auth.AuthScope;
@@ -14,12 +15,13 @@ import org.telegram.telegrambots.exceptions.TelegramApiException;
 import java.util.Properties;
 
 public class ServerProperties {
-
+    private static Aes256 aes256 = new Aes256();
     private static Properties properties = new Properties();
-    private static String urlProxy = FileUtils.getUrlProxy(properties);
-    private static Integer proxyPort = FileUtils.geProxyPort(properties);
-    private static String proxyUser = FileUtils.getUserProxy(properties);
-    private static String proxyPassword = FileUtils.getProxyPassword(properties);
+    private static String urlProxy = aes256.decrypt( FileUtils.getUrlProxy(properties));
+    private static String proxyUser =aes256.decrypt( FileUtils.getUserProxy(properties));
+    private static String proxyPassword = aes256.decrypt(FileUtils.getProxyPassword(properties));
+    private static String proxyPort = aes256.decrypt(FileUtils.geProxyPort(properties));
+//    private static Integer proxyPort = Integer.valueOf(aes256.decrypt(FileUtils.geProxyPort(properties)));
     public static boolean startGlobalServer;
 
     public void startProxyServer(TelegramBotsApi telegramBotsApi) throws TelegramApiException {
@@ -28,9 +30,9 @@ public class ServerProperties {
         DefaultBotOptions botOptions = ApiContext.getInstance(DefaultBotOptions.class);
         CredentialsProvider credentialsProvider = new BasicCredentialsProvider();
         credentialsProvider.setCredentials(
-                new AuthScope(urlProxy, proxyPort),
+                new AuthScope(urlProxy, Integer.valueOf(proxyPort)),
                 new UsernamePasswordCredentials(proxyUser, proxyPassword));
-        HttpHost httpHost = new HttpHost(urlProxy, proxyPort);
+        HttpHost httpHost = new HttpHost(urlProxy,Integer.valueOf(proxyPort));
         RequestConfig requestConfig = RequestConfig.custom().setProxy(httpHost).setAuthenticationEnabled(true).build();
         botOptions.setRequestConfig(requestConfig);
         botOptions.setCredentialsProvider(credentialsProvider);
