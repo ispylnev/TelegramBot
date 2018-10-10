@@ -2,6 +2,7 @@ package Controls;
 import static Controls.Constants.*;
 import static java.lang.Math.toIntExact;
 
+import Utils.Aes256;
 import Utils.BotTimer;
 import Utils.FileUtils;
 import Utils.MyDate;
@@ -22,14 +23,16 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 
-public class Bot extends TelegramLongPollingBot implements Ibutton {
+public class Bot extends TelegramLongPollingBot implements Ibutton,CallData{
 
+    private MongoDbWork mongoDbWork = new MongoDbWork();
     private Logger logger = LogManager.getLogger(Bot.class);
     private Properties properties = new Properties();
+    Aes256 aes256 = new Aes256();
     protected Bot(DefaultBotOptions options) {
         super(options);
     }
-    private MongoDbWork mongoDbWork = new MongoDbWork();
+    private FileUtils fileUtils = new FileUtils();
     private String userName;
     private String firstName;
     private long chatId;
@@ -37,10 +40,7 @@ public class Bot extends TelegramLongPollingBot implements Ibutton {
     private String beginTime;
     private String endTime;
     private Long duration;
-    private FileUtils fileUtils = new FileUtils();
-//    private String botName = fileUtils.decrypt(FileUtils.getBotName(properties));
     private String botName = FileUtils.getBotName(properties);
-//    private String token = fileUtils.decrypt(FileUtils.getToken(properties));
     private String token = FileUtils.getToken(properties);
 
     public Bot() {
@@ -77,10 +77,6 @@ public class Bot extends TelegramLongPollingBot implements Ibutton {
                     if (check) {
                         MyDate.setBeginTime(MyDate.getTimeNow());
                         beginTime = MyDate.getBeginTime();
-                        BotTimer botTimer = new BotTimer();
-                        Timer timer = new Timer(true);
-                        timer.schedule(botTimer,new Date(System.currentTimeMillis()+5000));
-
 
                         sendMsg(mes, "Начало работы :" + "\n" + beginTime.substring(0, 19));
                         mongoDbWork.updateDocument(toIntExact(userId), "false");
@@ -155,15 +151,19 @@ public class Bot extends TelegramLongPollingBot implements Ibutton {
             String callData = update.getCallbackQuery().getData();
             long mesId = update.getCallbackQuery().getMessage().getMessageId();
             long chatId = update.getCallbackQuery().getMessage().getChatId();
+
             if (callData.equals("Да")) {
-                EditMessageText messageText = new EditMessageText()
-                        .setChatId(chatId)
-                        .setMessageId(toIntExact(mesId))
-                        .setText("Для начала отсчета времени нажмите кнопку Начать" + "\n" +
-                                "Для того чтобы закончить нажмите кнопку Закночить" + "\n" +
-                                "Для вывода суммарно отработаного времени введите в чат дату в формате yyyy-MM-dd");
+
+//                EditMessageText messageText = new EditMessageText()
+//                        .setChatId(chatId)
+//                        .setMessageId(toIntExact(mesId))
+//                        .setText("Для начала отсчета времени нажмите кнопку Начать" + "\n" +
+//                                "Для того чтобы закончить нажмите кнопку Закночить" + "\n" +
+//                                "Для вывода суммарно отработаного времени введите в чат дату в формате yyyy-MM-dd");
                 try {
-                    execute(messageText);
+                    execute(setEditMessange("Для начала отсчета времени нажмите кнопку Начать" + "\n" +
+                            "Для того чтобы закончить нажмите кнопку Закночить" + "\n" +
+                            "Для вывода суммарно отработаного времени введите в чат дату в формате yyyy-MM-dd", chatId, mesId));
                 } catch (TelegramApiException e) {
 
                     e.printStackTrace();

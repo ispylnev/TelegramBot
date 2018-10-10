@@ -12,9 +12,11 @@ public class BotTimer extends TimerTask  {
 
     @Override
     public void run() {
-        this.string ="test";
-        SendMessage sendMessage = new SendMessage();
-        sendMessage.setText("test");
+        System.out.println("Test");
+//        this.string = "test";
+//        SendMessage sendMessage = new SendMessage();
+//        sendMessage.setText("test");
+
 
     }
 

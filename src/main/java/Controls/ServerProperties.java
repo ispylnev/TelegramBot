@@ -17,8 +17,9 @@ import java.util.Properties;
 public class ServerProperties {
     private static Aes256 aes256 = new Aes256();
     private static Properties properties = new Properties();
-    private static String urlProxy = aes256.decrypt( FileUtils.getUrlProxy(properties));
-    private static String proxyUser =aes256.decrypt( FileUtils.getUserProxy(properties));
+    private static String url = FileUtils.getUrlProxy(properties);
+    private static String urlProxy = aes256.decrypt(url);
+    private static String proxyUser =aes256.decrypt(FileUtils.getUserProxy(properties));
     private static String proxyPassword = aes256.decrypt(FileUtils.getProxyPassword(properties));
     private static String proxyPort = aes256.decrypt(FileUtils.geProxyPort(properties));
 //    private static Integer proxyPort = Integer.valueOf(aes256.decrypt(FileUtils.geProxyPort(properties)));

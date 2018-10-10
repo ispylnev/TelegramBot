@@ -12,16 +12,14 @@ public class TestCaseAes256 {
 
     @Test
     public void  testEncrypt (){
-//        String s  = aes256.decrypt(2);
-        Integer proxyPort = Integer.valueOf(aes256.decrypt(FileUtils.geProxyPort(properties)));
-       String encrypt = aes256.encrypt(proxyPort);
-        System.out.println(proxyPort);
-//        Assert.assertEquals( "Rt8wX3Mc3U/5bW61glRP7g==",encrypt);
+       String encrypt = aes256.encrypt(2);
+        Assert.assertEquals("GnWhAoLjGJ9La2gHQLLnHQ==",encrypt);
     }
 
     @Test
     public void testDecrypt(){
-       Assert.assertEquals("test",aes256.decrypt("B+vHJG+63vPVlA6c7ZukkA=="));
+//        String decrypt = aes256.decrypt("00FDa3UofFn0QL/RBijdFg==");
+       Assert.assertEquals("test",aes256.decrypt("00FDa3UofFn0QL/RBijdFg=="));
     }
 
 

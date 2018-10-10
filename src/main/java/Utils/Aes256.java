@@ -1,4 +1,7 @@
 package Utils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 import java.lang.*;
@@ -14,9 +17,10 @@ import javax.xml.bind.DatatypeConverter;
  */
 public class Aes256 {
 
-   private byte[] seed;
+    private static Logger aesLogger = LogManager.getLogger(Aes256.class);
 
-   public Aes256(){
+    private byte[] seed;
+    public Aes256(){
        this.seed = System.getenv("secretKey").getBytes();
    }
 
@@ -33,9 +37,11 @@ public class Aes256 {
             byte[] rawKey = getRawKey(seed);
             byte[] result = new byte[0];
             result = encrypt(rawKey,String.valueOf(cleartext).getBytes());
+            aesLogger.info("Зашифровано");
             return toHex(result);
         } catch (Exception e) {
             e.printStackTrace();
+            aesLogger.error("Ошибка шифрования");
 
         }
 
@@ -49,9 +55,11 @@ public class Aes256 {
             byte[] enc = toByte((String)encrypted);
             byte[] result = new byte[0];
             result = decrypt(rawKey, enc);
+            aesLogger.info("Дешифровано");
             return new String(result);
-        } catch (Exception e) {
+        } catch (Exception e ) {
             System.out.println(e.getStackTrace());
+            aesLogger.error("Ошибка дешифровния");
         }
 
         return null;

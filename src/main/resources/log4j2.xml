@@ -25,6 +25,9 @@
         <Logger name= "Controls.Bot" level="all" additivity="false">
             <AppenderRef ref="Console"/>
         </Logger>
+        <Logger name= "Utils.Aes256" level="all" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Logger>
 
         <!-- Root Logger -->
         <Root level="all">
