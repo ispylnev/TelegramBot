@@ -66,7 +66,7 @@ public class Bot extends TelegramLongPollingBot implements Ibutton,CallData,Obse
 
     @Override
     public void onUpdateReceived(Update update) {
-       timer =  timer.scheduleAtFixedRate(botTimer,3,7000);
+//       timer =  timer.scheduleAtFixedRate(botTimer,3,7000);
 
 
 

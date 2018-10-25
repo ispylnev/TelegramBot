@@ -17,7 +17,7 @@ public class MongoDbWork {
     private MongoCollection <Document> collection;
     private BasicDBObject basicDBObject = new BasicDBObject();
 
-   public MongoDbWork() throws MongoSocketException { //Todo оптимизация на пулл соединений или хотя-бы сделать закрытие после каждого запроса к бд
+   public MongoDbWork() throws MongoSocketException {
        java.util.logging.Logger.getLogger("org.mongodb.driver").setLevel(Level.OFF);
            connection = new MongoClient(new MongoClientURI("mongodb://admin:admin123@ds217002.mlab.com:17002/telebot"));
            database = connection.getDatabase("telebot");

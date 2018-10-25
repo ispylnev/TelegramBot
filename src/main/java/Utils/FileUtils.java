@@ -1,5 +1,4 @@
 package Utils;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -43,10 +42,7 @@ public  class FileUtils extends Aes256 {
                 e.printStackTrace();
             }
         }
-
         return  (String)properties.get(PROXY);
-
-
     }
 
     public static String  getProxyPassword(Properties properties)  {
@@ -74,6 +70,13 @@ public  class FileUtils extends Aes256 {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        finally {
+            try {
+                fileInputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
         return (String)properties.get(PROXYPUSER);
 
     }
@@ -85,6 +88,13 @@ public  class FileUtils extends Aes256 {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        finally {
+            try {
+                fileInputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
         return  (String)properties.get(BOTNAME);
     }
 
@@ -95,6 +105,13 @@ public  class FileUtils extends Aes256 {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        finally {
+            try {
+                fileInputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
        return (String) properties.get(TOKEN);
     }
 
@@ -104,6 +121,13 @@ public  class FileUtils extends Aes256 {
             properties.load(fileInputStream);
         } catch (IOException e) {
             e.printStackTrace();
+        }
+        finally {
+            try {
+                fileInputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         return (String) properties.get(PORT);
 
