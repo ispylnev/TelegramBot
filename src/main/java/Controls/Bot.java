@@ -2,17 +2,16 @@ package Controls;
 import static Controls.Constants.*;
 import static java.lang.Math.toIntExact;
 
-import Utils.Aes256;
 import Utils.BotTimer;
 import Utils.FileUtils;
 import Utils.MyDate;
+import Utils.TetsTime;
 import database.MongoDbWork;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.bson.Document;
 import org.telegram.telegrambots.api.methods.send.SendDocument;
 import org.telegram.telegrambots.api.methods.send.SendMessage;
-import org.telegram.telegrambots.api.methods.updatingmessages.EditMessageText;
 import org.telegram.telegrambots.api.objects.Message;
 import org.telegram.telegrambots.api.objects.Update;
 import org.telegram.telegrambots.bots.DefaultBotOptions;
@@ -23,12 +22,14 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 
-public class Bot extends TelegramLongPollingBot implements Ibutton,CallData{
+public class Bot extends TelegramLongPollingBot implements Ibutton,CallData,Observer{
+
+    BotTimer botTimer = new BotTimer();
+    Timer timer = new Timer(true);
 
     private MongoDbWork mongoDbWork = new MongoDbWork();
     private Logger logger = LogManager.getLogger(Bot.class);
     private Properties properties = new Properties();
-    Aes256 aes256 = new Aes256();
     protected Bot(DefaultBotOptions options) {
         super(options);
     }
@@ -65,6 +66,10 @@ public class Bot extends TelegramLongPollingBot implements Ibutton,CallData{
 
     @Override
     public void onUpdateReceived(Update update) {
+//       timer =  timer.scheduleAtFixedRate(botTimer,3,7000);
+
+
+
         Message mes = update.getMessage();
         if (update.hasMessage() && update.getMessage().hasText()) {
             userName = mes.getChat().getUserName();
@@ -73,6 +78,7 @@ public class Bot extends TelegramLongPollingBot implements Ibutton,CallData{
             userId = mes.getChat().getId();
             switch (mes.getText()) {
                 case START:
+
                     boolean check = Boolean.valueOf((String) mongoDbWork.findFieldInDoc("userId", userId).get("check"));
                     if (check) {
                         MyDate.setBeginTime(MyDate.getTimeNow());
@@ -144,6 +150,9 @@ public class Bot extends TelegramLongPollingBot implements Ibutton,CallData{
                         sendMsg(mes, String.valueOf(sumwork));
                     }
 
+
+
+
             }
 //Если пользователь нажал инлайн кнопку возвращается Callback
         } else if (update.hasCallbackQuery()) {
@@ -154,12 +163,6 @@ public class Bot extends TelegramLongPollingBot implements Ibutton,CallData{
 
             if (callData.equals("Да")) {
 
-//                EditMessageText messageText = new EditMessageText()
-//                        .setChatId(chatId)
-//                        .setMessageId(toIntExact(mesId))
-//                        .setText("Для начала отсчета времени нажмите кнопку Начать" + "\n" +
-//                                "Для того чтобы закончить нажмите кнопку Закночить" + "\n" +
-//                                "Для вывода суммарно отработаного времени введите в чат дату в формате yyyy-MM-dd");
                 try {
                     execute(setEditMessange("Для начала отсчета времени нажмите кнопку Начать" + "\n" +
                             "Для того чтобы закончить нажмите кнопку Закночить" + "\n" +
@@ -176,10 +179,15 @@ public class Bot extends TelegramLongPollingBot implements Ibutton,CallData{
             org.telegram.telegrambots.api.objects.Document teleDoc = update.getMessage().getDocument();
             String docId = teleDoc.getFileId();
             sendMsg(mes, "feli id " + docId);
+
         }
     }
 
+    @Override
+    public void update(Observable o, Object arg) {
+        System.out.println("fd");
 
+    }
 
     public String getBotUsername() {
 
@@ -190,8 +198,7 @@ public class Bot extends TelegramLongPollingBot implements Ibutton,CallData{
         return fileUtils.decrypt(token);
     }
 
-
-
+// Обновить напоминалку
 
 
 }
