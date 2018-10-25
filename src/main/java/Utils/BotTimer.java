@@ -1,26 +1,31 @@
 package Utils;
 
-
-import org.telegram.telegrambots.api.methods.send.SendMessage;
+import Controls.Bot;
 
 import java.util.TimerTask;
 
-//Напоминания
-public class BotTimer extends TimerTask  {
-   private String string;
 
+//Напоминания
+public class BotTimer extends TimerTask   {
+    public String string;
+
+
+
+    public class Ob extends java.util.Observable {
+        public void  obs(){
+           int i = 3;
+           setChanged();
+           notifyObservers(Integer.valueOf(i));
+           System.out.println(i);
+        }
+    }
 
     @Override
     public void run() {
-        System.out.println("Test");
-//        this.string = "test";
-//        SendMessage sendMessage = new SendMessage();
-//        sendMessage.setText("test");
-
-
+        Bot bot = new Bot();
+        BotTimer.Ob test = new Ob();
+        test.addObserver(bot);
+        test.obs();
     }
 
-    public String getString(){
-        return string;
-    }
 }

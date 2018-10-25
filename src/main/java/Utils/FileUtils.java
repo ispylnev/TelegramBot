@@ -26,6 +26,7 @@ public  class FileUtils extends Aes256 {
 
 
 
+
     }
 
     public static String getUrlProxy(Properties properties) {
@@ -54,6 +55,13 @@ public  class FileUtils extends Aes256 {
             properties.load(fileInputStream);
         } catch (IOException e) {
             e.printStackTrace();
+        }
+        finally {
+            try {
+                fileInputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         return (String) properties.get(PROXYPASSWORD);
 
